@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>more than OpAmps</h1>
+       <div class="image_left"> <a href="../img/unit14/integratedcircuits.png" target="new"><img src="../img/unit14/integratedcircuits.png" alt="" width="400" height="333" class="image_border" ></a></div>
+       <p>Though OpAmps are very common in audio circuits and also used in other applications they are not the only integrated circuits. A few others:</p>
+       <ul>
+         <li><strong>Voltage Regulators</strong>: Though these look like transistors, with just three connections, they are actually integrated circuits including at least a zener diode and resistor. In many cases they also include a transistor. </li>
+         <li><strong>Specialty Audio circuits</strong>: This can be anything from a microphone preamplifier to a analog to digital converter.</li>
+         <li><strong>DC-DC Converters</strong>: These allow the conversion of one DC voltage to another without much loss. This ends up being similar to the way that a transformer can convert one AC voltage into another without much loss.</li>
+         <li><strong>Computers</strong>: Computers are full or processors, memory, and I/O circuits built from I.C.s.</li>
+        </ul>
+        <div class="line_break"></div>
+        <h1>How Do I Know What It Is?</h1>
+       <p>I.C.s come in standardized sizes and shapes, the only way to know what is inside is to look up the part number and find the datasheet. A datasheet will give you all the information needed to design a circuit based on the I.C. This would include:</p>
+       <ul>
+         <li>What the circuit does.</li>
+         <li>Maximum ratings (for instance how much voltage you can supply without it blowing up).</li>
+         <li>Noise, distortion, and any other specifications of the circuit.</li>
+         <li>Pin connections (pin 1 is not always the same thing).</li>
+         <li>Example circuits (<em>sometimes you get these, though not always</em>)</li>
+        </ul>
+       <h2>Here are some sample datasheet:</h2>
+       <ul>
+         <li><a href="../media/unit14/NE5532.pdf" target="new">NE5532</a>: The dual OpAmp you will use in lab.</li>
+         <li><a href="../media/unit14/NE5534.PDF" target="new">NE5534</a>: A single OpAmp version of the 5532</li>
+         <li><a href="../media/unit14/TL071.pdf" target="new">TL071, TL072, TL074</a>: A family of single-quad OpAmps with JFET inputs for very high input impedance.</li>
+         <li><a href="../media/unit14/LM386.pdf" target="new">LM386</a>: The power amplifier that is within your lab kit to power the speaker.</li>
+         <li><a href="../media/unit14/THAT1510 and 1512.pdf" target="new">THAT1512</a>: The microphone preamp that you will experiment with in later labs.</li>
+         <li><a href="../media/unit14/THAT_4301_Datasheet.pdf" target="new">THAT4301</a>: A dynamics engine that a compressor can be built upon.</li>
+       </ul>
+       
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

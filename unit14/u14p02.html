@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>Operation Anyone?</h1>
+       <div class="image_left"> <img src="../img/unit14/OpAmp_schem.png" width="296" height="150"  class="image_border" ></div> <!-- end of image_left div-->
+       <p>The most common integrated circuit used in audio electronics is the <span class= "term">operational amplifier</span>, or <span class ="term">Op-amp</span> for short. The schematic symbol is shown in figure 2-1. Operational amplifiers got the start with the first computers. Originally these were build with tubes but later were replaced with transistor based op-amps. Whether tube or transistor they were designed to be building blocks that could be used for different mathematical operations. Addition, subtraction, multiplication, division, and logarithmic operations could all be accomplished with an op-amp. The design of the op-amp circuit was such that the only changes needed for the different functions were where the input was (or inputs were) connected and how much feedback was used.</p>
+       <p>The modern op-amps we use for audio are still based on this original concept. Depending on where we connect the input(s) and how much feedback we allow we can create: </p>      
+       <div class="aside_RightWrap">
+         <div class="imgText">
+           <p><strong>Gain?</strong><br>
+           Remember that gain refers to $\frac {Output V}{Input V}$.</p>
+         </div>
+       </div>
+       <ul>
+         <li>amplifiers with gains from 1 up</li>
+         <li>&quot;amplifiers&quot; with gains of less than 1</li>
+         <li>summing amplifiers that combine signals</li>
+         <li>differential amplifiers </li>
+         <li>filter circuits</li>
+        </ul>
+       <p>Looking at figure 2-1 you will see that there are five connections to the op-amp. </p>
+       <ul>
+         <li>There are two input connections.
+           <ul>
+             <li>The <span class ="term">Inverting Input</span>: Signals coming into this input will have the opposite polarity at the output. (&quot;-&quot; on the schematic symbol)</li>
+             <li>The <span class= "term">Non-Inverting Input</span>: Signals coming into this input will have the same polarity at the output. (&quot;+&quot; on the schematic symbol)</li>
+           </ul>
+         </li>
+         <li>There are two voltage connections. 
+           <ul>
+             <li>One of these is for a <span class="red">positive voltage</span>.</li>
+             <li> The other for a <span class="blue">negative voltage </span>or<span class="green"> ground</span>. </li>
+           </ul>
+         </li>
+         <li>There is an output connection.</li>
+        </ul>
+       <h1>Gain</h1>
+       <div class="image_right"> <a href="../img/unit14/OpAmp_basic.png" target="new"><img src="../img/unit14/OpAmp_basic.png" width="400" height="230"   class="image_border" ></a> </div>
+       <p>Operational amplifiers  are designed to have much more gain than is required by most circuits. Not only  is this gain extremely high, it is also unstable. Typical OpAmps will have a  gain of around 1000, making the output 1000 times larger than the input. This  is done to allow gain to be set (to less than the maximum) by adding negative  feedback. This negative feedback, like the negative feedback discussed in  chapter 6, also reduces distortion as it reduces gain.<br>
+        It is important to realize that the output of an OpAmp is limited by the supply  voltages. A typical OpAmp used for audio would have supply voltages of +15V and  -15V. That means that the output, no matter how high the gain, would be limited  to no more than 30VPK. In reality it would be even less than that as  some voltage is used up by the OpAmp itself. With no negative feedback an OpAmp  given a sine wave as an input will create a square wave output. That translates  to a very distorted output.</p>
+<table class="two_tone_table_left">
+        <tbody>
+          <tr>
+            <th colspan="3" scope="col">Negative Feedback</th>
+          </tr>
+          <tr>
+            <td>More negative feedback</td>
+            <td>=</td>
+            <td>Less gain</td>
+          </tr>
+          <tr>
+            <td>Less negative feedback</td>
+            <td>=</td>
+            <td>More gain</td>
+          </tr>
+        </tbody>
+       </table>
+       <p>Negative feedback is very easy to add. Simply connect a resistor from the output to the inverting input. An example basic circuit is shown in figure 2-2. In this example the feedback resistor is R2. </p>
+       <ul>
+         <li>If R2 is made smaller we send more negative feedback to the amplifier and the gain (and voltage at the output) is reduced.</li>
+         <li>If R2 is made larger we send less negative feedback to the amplifier and the gain (and voltage at the output) is increased.</li>
+       </ul>
+       <p>There are two points in the circuit shown in figure 2-2 that are not connected to anything nor are they labeled. The left side of R1 and the non-inverting (+) input are both not connected. These will either be the input to the circuit or connected to ground. Which one goes where determines whether it is an inverting or non-inverting amplifier. These will be discussed on the next two pages.</p>
+       <h1>OpAmp Uses</h1>
+       <p>Open a modern piece of  audio equipment and you will likely see many OpAmps. That&rsquo;s because they can be  used for just about everything such as microphone preamplifiers, balanced  inputs, equalizers, summing amplifiers, output amplifiers.</p>
+<p>&nbsp;</p>
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

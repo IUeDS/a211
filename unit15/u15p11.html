@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>Compressors and Limiters</h1>
+       <p>Let's start with a simple explanation of what compressors and limiters do. This is a very simplified explanation but will work for this course. </p>
+       <p>Compressors allow you to reduce the dynamic range of a signal. That means that the range from loud to soft will be smaller after the signal goes through the compressor. A limiter is a more extreme version of a compressor. 
+       <p>If you'd like some more info on compressors here are a couple links.       
+       <ul>
+         <li>Warren Huart has a great YouTube series, here is the compression video:<br>
+         <strong>&ldquo;<a href="https://youtu.be/3RpaD9t5xWM" target="new">How to Record - Lesson 10: Compression Plug-ins - Warren Huart: Produce Like A Pro</a>&rdquo;</strong></li>
+         <li><strong>If you'd prefer reading</strong> here is a <a href="http://www.barryrudolph.com/mix/comp.html" target="new">good article</a> from Mix Magazine. <br>
+         </li>
+       </ul>
+       <div class="image_right"><a href="../img/unit15/labs/compblock.png" target="new"><img src="../img/unit15/labs/compblock.png" alt="block diagram
+" width="400" height="139" class="image_border"></a></div>
+       <p>A block diagram of a basic compressor/limiter is shown in figure 11-1.  There are two paths in most compressors (or limiters), they are:</p>
+       <ul>
+         <li><strong>Signal Path:</strong> This is the actual path of the audio you want to compress. You send a signal into the input and you get that signal out with less dynamic range.<br>
+         (<em>***note, this is very much an oversimplification of compression! </em>)</li>
+         <li><strong>Sidechain Path:</strong> This is where the audio is converted into something that can be used to control the gain reduction to produce the compressed signal. this portion of the circuit is typically much more complex than the signal path.</li>
+         <li><strong>Control Voltage:</strong> The audio in the sidechain path is often converted to DC and used to control the gain of the component that actually changes the gain (see below).</li>
+        </ul>
+        <h2>Compression Methods</h2>
+        <ul>
+          <li><strong>VCA</strong>: VCA stands for Voltage Controlled Amplifier and it is an amplifier with a gain that is set by a DC voltage. The audio in the sidechain is converted into DC. The voltage of that DC is related to the volume of the audio. Think of the rectifier circuits we have already looked at. The louder the signal the higher the DC voltage. That DC voltage can be used to control the gain of the VCA.</li>
+          <li><strong>Optical</strong>: This type of compressor uses a photo sensitive component. This component changes is properties depending on how much light it is exposed to. A photoresistor for instance will change resistance based on how much light you allow to get to it. This photosensitive component is
+    
+            
+        place in the circuit so that it can control gain (in an OpAmp feedback loop for instance) and then it is exposed to light. The light it is exposed to is created from the audio signal, more audio signal = more light.</li>
+          <li><strong>Vari-mu</strong>: This is very similar to a VCA but uses a very special type of tube called a variable mu or remote cutoff. A DC voltage added to the control grid of this tube can control the gain of the tube. As with the VCA (and possible the optical) the audio is converted to a DC voltage and used to control the gain of the vari-mu tubes.</li>
+          <li><strong>FET</strong>: This is similar to the optical compressor except that the voltage on the gate of the jFET changes current through the source&gt;drain. This can be used to control gain by affecting feedback or directly controlling the audio signal.</li>
+          <li><strong>Diode Bridge</strong>: This is a rarely used type of compression that uses the &quot;limit&quot; function of diodes to control how far the signal is away from a control signal.</li>
+        </ul>
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

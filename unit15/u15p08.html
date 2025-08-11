@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>First some back-GND</h1>
+       <p>We are now going to investigate the microphone preamplifier (and line input) of the channel strip. It is worth making sure we understand what a microphone preamplifier does first.       
+       A microphone preamplifier must amplify signals from a microphone up to line level. For professional audio the microphone preamplifier must also have a balanced input. Condenser microphones also require the mic preamp to supply 48V<sub>DC</sub> to them through phantom power.
+       <div class="image_right no_caption"><img src="../img/unit15/microphone.png" alt="" width="120" height="200" class="image_border"></div>
+       <h2>Microphone Level</h2>   
+       <p>Microphones convert acoustic energy (sound) into electrical energy. This electrical energy ends up being very small and we refer to the range of voltages that microphones produce as <span class="term">mic level</span>. Mic level is typically described as being from -60dBu to -20dBu. We discussed dB in Unit 4 but what is a dBu? the "u" in dBu refers to the a reference voltage. In the case of dBu it is 0.775V<sub>RMS</sub>. You may also see dBV in which case the reference is 1V<sub>RMS</sub>. Professional audio uses dBu as the standard for measuring audio levels. Why 0.775V<sub>RMS</sub> is used is a discussion for the next semester course. for now just accept it :-).</p>
+       <p>The formula for dB (when dealing with voltage) is $dB = 20log(\frac {V1}{V2})$.
+       
+         Since we are using dBu, V2 in that equation becomes 0.775V<sub>RMS</sub> (<em>It is important to keep V<sub>RMS</sub> in mind because V1 will also be in V<sub>RMS</sub> )</em>. We can use that formula to define what voltage mic level would be. <em>This is particularly useful if we want to test this circuit as we will need to know what voltage to send to the input.</em>
+       <p>We have a range of -60dBu to -20dBu.              
+       <table width="100%" border="1" class="two_tone_table_left">
+         <thead>
+         <tr>
+             <th>First the low side of that range, -60dBu.</td>
+             <th>Next the high side of that range, -20dBu.
+      </td>
+           </tr>
+         <tbody>
+           <tr>
+             <td>$-60dBu = 20log(\frac {V1}{0.775Vrms})$
+         <ol>
+         <li>divide -60 by 20 to get:<br>
+         $-3 = log(\frac {V1}{0.775Vrms})$</li>
+         <li>convert the log equation to exponential to get:<br>
+         $10^{-3} = \frac {V1}{0.775Vrms}$</li>
+         <li>covert the exponent to fraction to get:<br>
+         $\frac {1}{1000} = \frac {V1}{0.775Vrms}$           </li>
+         <li>multiple both sides by 0.775 to get:<br>
+         $\frac {0.775}{1000} = V1$           </li>
+         <li>solve what's left:<br>
+           $  V1 = \frac {0.775}{1000} = 0.000775Vrms$</li>
+         <li>convert that to millivolts<br>
+           $  0.000775Vrms = 0.775mVrms$<br>
+         </li>
+             </ol></td>
+             <td> $-20dBu = 20log(\frac {V1}{0.775Vrms})$
+             <ol>
+         <li>divide -20 by 20 to get:<br>
+         $-1 = log(\frac {V1}{0.775Vrms})$</li>
+         <li>convert the log equation to exponential to get:<br>
+         $10^{-1} = \frac {V1}{0.775Vrms}$</li>
+         <li>covert the exponent to fraction to get:<br>
+         $\frac {1}{10} = \frac {V1}{0.775Vrms}$</li>
+         <li>multiple both sides by 0.775 to get:<br>
+         $\frac {0.775}{10} = V1$</li>
+         <li>solve what's left:<br>
+           $  V1 = \frac {0.775}{10} = 0.0775Vrms$ </li>
+         <li>convert that to millivolts<br>
+$  0.0775Vrms = 77.5mVrms$<br>
+         </li>
+             </ol></td>
+           </tr>
+         </tbody>
+       </table>
+       <p>       
+       <p>We can now see (after all that math) that mic level ranges from 0.0775mV<sub>RMS</sub> to 77.5mV<sub>rms</sub>.
+      
+        
+       
+        <p>A microphone preamplifier must amplify that mic level signal up to line level. For professional audio, line level has defined nominal level of +4dBu. We will want to amplify that -60dBu to -20dBu signal up to +4dBu. Let's see what that means in terms of voltage, same math.        
+        <p>$4dBu = 20log(\frac {V1}{0.775Vrms})$
+        <ol>
+           <li>divide 4 by 20 to get:<br>
+             $\frac {4}{20} = log(\frac {V1}{0.775Vrms})$</li>
+           <li>convert the fraction to a decimal (to make the next step easier)<br>
+             $0.2 = log(\frac {V1}{0.775Vrms})$<br>
+           </li>
+           <li>convert the log equation to exponential to get:<br>
+            $10^{0.2}  =\frac {V1}{0.775Vrms}$</li>
+           <li>multiple both sides by 0.775 to get:<br>
+             $10^{0.2} * 0.775 = V1$ </li>
+           <li>solve what's left (and round):<br>
+             $  V1 = 10^{0.2} * 0.775= 1.23Vrms$</li>
+        </ol>
+        <p>So our preamplifier will be amplifying something that is between 0.000775V<sub>RMS</sub> and 0.775V<sub>RMS</sub> up to be 1.23V<sub>RMS</sub>.</p>
+        <p>If we use the gain formula from unit 10 $\frac {Vout}{Vin}$ we get:<br>
+$\frac {1.23Vrms}{0.000775Vrms}$ = a maximum gain of 1587 <br>
+  and<br>
+  $\frac {1.23Vrms}{0.775Vrms}$ = a minimum gain of 1.5</p>
+  <h2>Balanced Input</h2>
+  <p>Professional audio uses balanced lines in order to reduce noise that might be added to the audio signal as it is sent through wires. Later units will cover this in greater detail but a simple understanding will suffice for now. Balanced lines are differential, like OpAmps. that means that the signal that we want to convey is the difference between the Hot and Cold lines. There are three connections used for most balanced lines, they are:
+        <ul>
+          <li><strong>Hot: </strong>This connection carries the audio signal in its original polarity.</li>
+          <li><strong>Cold: </strong>This connection carries a signal that is identical to Hot in every way except that it is opposite in polarity.</li>
+          <li><strong>Ground:</strong> This connection is not required for all balanced lines but it is used for to reject additional noise and for phantom power. Phantom power is required by condenser microphones.</li>
+        </ul>
+        <p>Balanced lines are differential, like OpAmps. that means that the signal that we want to convey is the difference between the Hot and Cold lines. </p>
+        <h2>Phantom Power</h2>
+        <p>Condenser microphones create an extremely low voltage from the diaphragm. This voltage is actually too low to travel down a cable to a preamplifier. Because of this, condenser microphones have amplifiers built into them to amplify the voltage from the diaphragm. This amplifier requires power and that power (for professional microphones at least ) is supplied from the preamplifier through <span class="term">phantom power</span>.
+        Phantom power is a DC voltage (+48V is typical though it can be lower) that is supplied to both the hot and cold connections of the microphone. This voltage is called phantom because it can be used when compared to ground, but to the audio path (which sees the difference between hot and cold) it doesn't exist because it is the same on hot and cold.
+        <p>Most microphones using 48V phantom power will require about 3mA of current. The standard (defined by <a href="http://www.iec.ch/" target="new">IEC</a>) defines that there should be 14mA available.
+        <h1>Re-Cap</h1>
+        <div class="image_right"><img src="../img/unit15/cap.jpg" alt="" width="200" height="155" class="image_border"></div>
+        <p>A microphone preamplifier needs to amplify the difference between Hot and Cold by as little as 1.5 and as much as 1587. It also needs to supply 48V phantom power to the microphone.</p>
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

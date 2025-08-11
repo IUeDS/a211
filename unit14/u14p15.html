@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div class="col-md-8 clearboth">
+  <div class="head-box clearfix">
+    <div class="col-sm-6 col-md-6 no-padd">
+      <div class="thumb-feat"> <img width="442" height="125" src="../img/unit14/StateVariable/fil102.gif" alt="State Variable Filter">
+        <!---->
+        <!--                                    <div class="preload-image"-->
+        <!--                                         data-preload="true"-->
+        <!--                                         data-dir="-->
+        <!--"-->
+        <!--                                         data-src="-->
+        <!--"></div>-->
+      </div>
+    </div>
+    <div class="desc col-sm-6 col-md-6">
+      <h1>State Variable Filter</h1>
+      <p>The <strong>state variable filter</strong> is a type of multiple-feedback filter circuit that can produce all three filter responses, <em>Low Pass</em>, <em>High Pass</em> and <em>Band Pass</em> simultaneously from the same single active filter design.</p>
+    </div>
+    <div class="social_box_buttons-excerpt"></div>
+  </div>
+  <div class="section row">
+    <div class="single-wrap col-md-12">
+      <div class="content-cont">
+        <div class="bialty-container">
+          <p>State variable filters use three (or more) operational amplifier circuits (the active element) cascaded together to produce the individual filter outputs but if required an additional summing amplifier can also be added to produce a fourth <em>Notch filter</em> output response as well.</p>
+          <p><em>State variable filters</em> are second-order RC active filters consisting of two identical op-amp integrators with each one acting as a first-order, single-pole low pass filter, a summing amplifier around which we can set the filters gain and its damping feedback network. The output signals from all three op-amp stages are fed back to the input allowing us to define the state of the circuit.</p>
+          <p>One of the main advantages of a state variable filter design is that all three of the filters main parameters, Gain (<span class="ntxt">A</span>), corner frequency, <span class="ntxt">ƒ<sub>C</sub></span> and the filters <span class="ntxt">Q</span> can be adjusted or set independently without affecting the filters performance.</p>
+          <p>In fact if designed correctly, the -3dB corner frequency, (&nbsp;<span class="ntxt">ƒc</span>&nbsp;) point for both the low pass amplitude response and the high pass amplitude response should be identical to the center frequency point of the band pass stage. That is <span class="ntxt">ƒ<sub>LP(-3dB)</sub></span> equals <span class="ntxt">ƒ<sub>HP(-3dB)</sub></span> which equals <span class="ntxt">ƒ<sub>BP(center)</sub></span>. Also the damping factor, (&nbsp;<span class="ntxt">ζ</span>&nbsp;) for the band pass filter response should be equal to 1/Q as Q will be set at -3dB, (0.7071).</p>
+          <p>Although the filter provides low pass (LP), high pass (HP) and band pass (BP) outputs the main application of this type of filter circuit is as a state variable band pass filter design with the center frequency set by the two RC integers.</p>
+          <p>While we have seen before that a band pass filters characteristics can be obtained by simply cascading together a low pass filter with a high pass filter, state variable band pass filters have the advantage that they can be tuned to be highly selective (high Q) offering high gains at the center frequency point.</p>
+          <p>There are several state variable filter designs available all based on the standard filter design with both inverting and non-inverting variations available. However, the basic filter design will be the same for both variations as shown in the following block diagram representation.</p>
+          <h3>State Variable Filter Block Diagram</h3>
+          <p class="text-center"><img src="../img/unit14/StateVariable/filter-fil102.gif" alt="state variable filter diagram" title="State Variable Filter Diagram" width="442" height="125" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Then we can see from the basic block diagram above that the state variable filter has three possible outputs, V<sub>HP</sub>, V<sub>BP</sub> and V<sub>LP</sub> with one each from the three op-amps. A notch filter response can also be realized by the addition of a fourth op-amp.</p>
+          <p>With a constant input voltage, V<sub>IN</sub> the output from the summing amplifier produces a high pass response which also becomes the input of the first RC Integrator. The output from this integrator produces a band pass response which becomes the input of the second RC Integrator producing a low pass response at its output. As a result, separate transfer functions for each individual output with respect to the input voltage can be found.</p>
+          <p>The basic non-inverting state variable filter design is therefore given as:</p>
+          <h3>State Variable Filter Circuit</h3>
+          <p class="text-center"><img src="../img/unit14/StateVariable/filter-fil103.gif" alt="state variable filter circuit" title="State Variable Filter Circuit" width="529" height="233" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>and the amplitude response of the three outputs from the state variable filter will look like:</p>
+          <h3>Normalised Response of a State Variable Filter</h3>
+          <p class="text-center"><img src="../img/unit14/StateVariable/filter-fil103a.gif" alt="state variable filter amplitude response" title="State Variable Filter Amplitude Response" width="478" height="290" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>One of the main design elements of a state variable filter is its use of two op-amp integrators. As we saw in the Integrator tutorial, op-amp integrators use a frequency dependant impedance in the form of a capacitor within their feedback loop. As a capacitor is used the output voltage is proportional to the integral of the input voltage as shown.</p>
+          <h3>Op-amp Integrator Circuit</h3>
+          <p class="text-center"><img src="../img/unit14/StateVariable/filter-fil104.gif" alt="op amp integrator circuit" title="Op-amp Integrator Circuit" width="337" height="176" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager">
+            <noscript>
+            </noscript>
+          </p>
+          <p class="text-center"><img src="../img/unit14/StateVariable/filter-fil105.gif" alt="integrator equation" title="Op-amp Integrator Equation" width="232" height="60" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager">
+            <noscript>
+            </noscript>
+          </p>
+          <p>To simplify the math’s a little, this can also be re-written in the frequency domain as:</p>
+          <p class="text-center"><img src="../img/unit14/StateVariable/filter-fil106.gif" alt="integrator voltage equation" title="Op-amp Integrator Voltage Equation" width="234" height="61" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>The output voltage <span class="ntxt">Vout</span> is a constant <span class="ntxt">1/RC</span> times the integral of the input voltage <span class="ntxt">Vin</span> with respect to time. Integrators produce a phase lag with the minus sign (&nbsp;<span class="mtxt">–</span>&nbsp;) indicating a 180<sup>o</sup> phase shift because the input signal is connected directly to the inverting input terminal of the op-amp.</p>
+          <p>In the case of op-amp <span class="ntxt">A2</span> above, its input signal is connected to the output of the proceeding op-amp, <span class="ntxt">A1</span> so its input is given as <span class="ntxt">V<sub>HP</sub></span> and its output as <span class="ntxt">V<sub>BP</sub></span>. Then from above, the expression for op-amp, <span class="ntxt">A2</span> can be written as:</p>
+          <p class="text-center"><img src="../img/unit14/StateVariable/filter-fil107.gif" alt="op-amp two equation" title="Op-amp Two Equation" width="229" height="61" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Then by rearranging this formula we can find the transfer function of the inverting integrator, <span class="ntxt">A2</span></p>
+          <h3>Op-amp A2 Transfer Function</h3>
+          <p class="text-center">
+            <noscript>
+            <img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil108.gif" alt="integrator transfer function" title="Integrator Transfer Function" width="268" height="61" />
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Exactly the same assumption can be made as above to find the transfer function for the other op-amp integrator, <span class="ntxt">A3</span></p>
+          <h3>Op-amp A3 Transfer Function</h3>
+          <p class="text-center">
+            <noscript>
+            <img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil109.gif" alt="op-amp integrator equation" title="Op-amp Integrator Equation" width="266" height="61" />
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>So the two op-amp integrators, <span class="ntxt">A2</span> and <span class="ntxt">A3</span> are connected together in cascade, so the output from the first (<span class="ntxt">V<sub>BP</sub></span>) becomes the input of the second. So we can see that the band pass response is created by integrating the high pass response and the low pass response is created by integrating the band pass response. Therefore the transfer function between <span class="ntxt">V<sub>HP</sub></span> and <span class="ntxt">V<sub>LP</sub></span> is given as:</p>
+          <p class="text-center">
+            <noscript>
+            <img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil108a.gif" alt="transfer function" title="Transfer Function" width="468" height="66" />
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Note that each integrator stage provides an inverted output but the summed output will be positive since they are inverting integrators. If exactly the same values for <span class="ntxt">R</span> and <span class="ntxt">C</span> are used so that the two circuits have the same integrator time constant, the two amplifier circuits can be regarded with one single integrator circuit having a corner frequency, <span class="ntxt">ƒ<sub>C</sub></span>.</p>
+          <p>As well as the two integrator circuits, the filter also has a differential summing amplifier providing a weighted summation of its inputs. The advantage here is that the inputs to the summing amplifier, <span class="ntxt">A1</span> combines oscillatory feedback, damping and input signals to the filter as all three outputs are fed back to the summing inputs.</p>
+          <h3>Amplifier Summing Circuit</h3>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil111.gif" alt="amplifier summing circuit" title="Amplifier Summing Circuit" width="316" height="168" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Operational amplifier, <span class="ntxt">A1</span> is connected as an adder–subtracter circuit. That is it sums the input signal, <span class="ntxt">V<sub>IN</sub></span> with the <span class="ntxt">V<sub>BP</sub></span> output of op-amp <span class="ntxt">A2</span> and the subtracts from it the <span class="ntxt">V<sub>LP</sub></span> output of op-amp <span class="ntxt">A3</span>, thus:</p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          <img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil112.gif" alt="non-inverting transfer function" title="Non-inverting Transfer Function" width="372" height="216" /></p>
+          <p class="text-center">and</p>
+          <p class="text-center"><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil113.gif" alt="inverting transfer function" title="Inverting Transfer Function" width="381" height="216" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>As the differential inputs, <span class="ntxt">+V</span> and <span class="ntxt">-V</span> of an operational amplifier are the same, that is: <span class="ntxt">+V&nbsp;–&nbsp;-V</span>, we can rearrange the two expressions above to find the transfer function for the output of <span class="ntxt">A1</span>, the high pass output.</p>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil114.gif" alt="differential summer transfer function" title="Differential Summer Transfer Function" width="558" height="382" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>We know from above, that <span class="ntxt">V<sub>BP</sub></span> and <span class="ntxt">V<sub>LP</sub></span> are the outputs from the two integrators, <span class="ntxt">A2</span> and <span class="ntxt">A3</span> respectively. By substituting the integrator equations for <span class="ntxt">A2</span> and <span class="ntxt">A3</span> into the above equation, we get the transfer function of the state variable filter to be:</p>
+          <h3>State Variable Filter Transfer Function</h3>
+          <h3><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil115.gif" alt="state variable filter transfer function" title="State Variable Filter Transfer Function" width="526" height="122" /></h3>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>We said previously that a <strong>State Variable Filter</strong> produces three filter responses, <em>Low Pass</em>, <em>High Pass</em> and <em>Band Pass</em> and that the band pass response is that of a very narrow high Q filter and this is evident in the SVF’s transfer function above as it resembles that of a standard second-order response.</p>
+          <h3>Normalised 2nd-order Transfer Function</h3>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil117.gif" alt="state variable filter transfer function" title="State Variable Filter Transfer Function" width="272" height="132" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <h3>The Filters Corner Frequency, ƒ<sub>C</sub></h3>
+          <p>If we make both the integrators input resistors and feedback capacitors the same, then the state variable filters corner frequency can be easily tuned without affective its overall <span class="ntxt">Q</span>. Likewise, the value of <span class="ntxt">Q</span> can be varied without altering the corner frequency. Then the corner frequency is given as:</p>
+          <h3>State Variable Filter Corner Frequency</h3>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil116.gif" alt="state variable filter corner frequency" title="State Variable Filter Corner Frequency" width="448" height="73" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>If we make feedback resistors <span class="ntxt">R3</span> and <span class="ntxt">R4</span> the same values, then the corner frequency of each filter output from the state variable filter simply becomes:</p>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil116a.gif" alt="simplified corner frequency" title="Simplified Corner Frequency" width="317" height="58" /></p>
+          <div class="equation" style="width:360px;">
+            <noscript>
+            </noscript>
+          </div>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Then tuning of the state variable corner frequency is accomplished simply by varying either the tuning resistor, <span class="ntxt">R</span> or the capacitor, <span class="ntxt">C</span>.</p>
+          <p>State variable filters are characterised not only by their individual output responses, but also by the filters <span class="ntxt">“Q”</span>, Quality factor. <span class="ntxt">Q</span> relates to the “sharpness” of the band pass filters amplitude response curve and the higher the <span class="ntxt">Q</span>, the higher or sharper the output response resulting in a filter that is highly selective.</p>
+          <p>For a band pass filter, <span class="ntxt">Q</span> is defined as the center frequency divided by the filters -3dB bandwidth, that is <span class="ntxt">Q&nbsp;=&nbsp;ƒc/BW</span>. But <span class="ntxt">Q</span> can also be found from the denominator of the above transfer function as it is the reciprocal of the damping factor ( <span class="ntxt">ζ</span> ). Then <span class="ntxt">Q</span> is given as:</p>
+          <h3>The Q Factor of a State Variable Filter</h3>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil118.gif" alt="state variable filters Q" title="State Variable Filters Q" width="381" height="64" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Again, if resistors <span class="ntxt">R3</span> and <span class="ntxt">R4</span> are equal and both integrator components <span class="ntxt">R</span> and <span class="ntxt">C</span> are equal, then the final square root expression would reduce to: <span class="mtxt">√</span><span class="otxt">1</span> or simply <span class="ntxt">1</span> as the numerator and denominator cancel each other out.</p>
+          <h2>State Variable Filter Example No1</h2>
+          <p>Design a <em>State Variable Filter</em> which has a corner (natural undamped) frequency, <span class="ntxt">ƒ<sub>C</sub></span> of 1kHz and a quality factor, <span class="ntxt">Q</span> of 10. Assume both the frequency determining resistors and capacitors are equal. Determine the filters DC gain and draw the resulting circuit and Bode plot.</p>
+          <p>We said above that if both the resistor, <span class="ntxt">R</span> and the feedback capacitor, <span class="ntxt">C</span> of the two integrator circuits are the same values, that is <span class="ntxt">R&nbsp;=&nbsp;R</span> and <span class="ntxt">C&nbsp;=&nbsp;C</span>, the cut-off or corner frequency point for the filter is given simply as:</p>
+          <h3>Filter’s Corner Frequency</h3>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil118.gif" alt="state variable filters Q" title="State Variable Filters Q" width="381" height="64" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <p>We can choose a value for either the resistor, or the capacitor to find the value of the other. If we assume a suitable value of <span class="ntxt">10nF</span> for the capacitor then the value of the resistor will be:</p>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil119.gif" alt="cut-off frequency resistor value" title="Cut-off Frequency Resistor Value" width="425" height="60" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <p>Giving <span class="ntxt">C&nbsp;=&nbsp;10nF</span> and <span class="ntxt">R&nbsp;=&nbsp;15.9kΩ</span>, or <span class="ntxt">16kΩ</span> to the nearest preferred value.</p>
+          <p>The value of <span class="ntxt">Q</span> is given as <b>10</b>. This relates to the filters damping coefficient as:</p>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil120.gif" alt="damping coefficient" title="Damping Coefficient" width="374" height="58" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <p>In the state variable transfer function above, the <span class="ntxt">2ζ</span> part is replaced by the resistor combination giving:</p>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil121.gif" alt="filters damping coefficient" title="Filters Damping Coefficient" width="462" height="70" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <p>We know from above that <span class="ntxt">R&nbsp;=&nbsp;16kΩ</span> and <span class="ntxt">C&nbsp;=&nbsp;10nF</span>, but if we assume that the two feedback resistors, <span class="ntxt">R3</span> and <span class="ntxt">R4</span> are the same and equal to <span class="ntxt">10kΩ</span>, then the above equation reduces down to:</p>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil122.gif" alt="svf resistor value" title="SVF Resistor Value" width="402" height="70" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <p>Assuming a suitable value for the input resistor, <span class="ntxt">R1</span> of say <span class="ntxt">1kΩ</span>, then we can find the value of <span class="ntxt">R2</span> as follows:</p>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil123.gif" alt="r2 resistor value" title="R2 Resistor Value" width="364" height="160" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <p>From the normalised transfer function above, the DC passband gain is defined as <span class="ntxt">A<sub>o</sub></span> and from the equivalent state variable filter transfer function this equates to:</p>
+          <h3>The SVF Filters DC Passband Gain</h3>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil124.gif" alt="state variable filter dc gain" title="State Variable Filter DC Gain" width="402" height="124" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <p>Therefore the DC voltage gain of the filter is calculated at 1.9, which basically equates to <span class="ntxt">R2/R3</span>. Also the maximum gain of the filter at <span class="ntxt">ƒ<sub>C</sub></span> can be calculated as: <span class="ntxt">A<sub>o</sub>&nbsp;x&nbsp;Q</span> as follows.</p>
+          <h3>The SVF Filters Maximum Gain</h3>
+          <p><img data-lazy-fallback="1" loading="lazy" src="../img/unit14/StateVariable/filter-fil124a.gif" alt="state variable filter corner frequency gain" title="State Variable Filter Corner Frequency Gain" width="342" height="118" /></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <h2>State Variable Filter Circuit</h2>
+          <p>Then the design of the state variable filter circuit will be: <span class="ntxt">R&nbsp;=&nbsp;16kΩ</span>, <span class="ntxt">C&nbsp;=&nbsp;10nF</span>, <span class="ntxt">R1&nbsp;=&nbsp;1kΩ</span>, <span class="ntxt">R2&nbsp;=&nbsp;19kΩ</span> and <span class="ntxt">R3&nbsp;=&nbsp;R4&nbsp;=&nbsp;10kΩ</span> as shown.</p>
+          <h3>State Variable Filter Design</h3>
+          <p><span class="text-center"><img src="../img/unit14/StateVariable/filter-fil125.gif" alt="state variable filter design" title="State Variable Filter Design" width="508" height="218" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager"></span></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>We can now plot the individual output response curves for the state variable filter circuit over a range of frequencies from 1Hz to 1MHz onto a Bode Plot as shown.</p>
+          <h3>State Variable Filter Bode Plot</h3>
+          <p><span class="text-center"><img src="../img/unit14/StateVariable/filter-fil126.gif" alt="state variable filter bode plot" title="State Variable Filter Bode Plot" width="520" height="382" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager"></span></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Then we can see from the filters response curves above, that the DC gain of the filter circuit is at 5.57dB which equates to an open loop voltage gain, <span class="ntxt">A<sub>o</sub></span> or 1.9 as calculated above. The response also shows that the output curves peaks at a maximum voltage gain of 25.6dB at the corner frequency due to the value of <b>Q</b>. As <span class="ntxt">Q</span> also relates the band pass filters center frequency to its bandwidth, the bandwidth of the filter will therefore be: <span class="ntxt">ƒ<sub>o</sub>/10&nbsp;=&nbsp;100Hz</span>.</p>
+          <p>We have seen in this <em>state variable filter</em> tutorial that instead of an active filter producing one type of frequency response, we can use multiple-feedback techniques to produce all three filter responses, <em>Low Pass</em>, <em>High Pass</em> and <em>Band Pass</em> simultaneously from the same single active filter design.</p>
+          <p>But as well as the three basic filter responses, we can add an additional op-amp circuit onto the basic state variable filter design above to produce a fourth output response resembling that of a standard <em>Notch Filter</em>.</p>
+          <h2>Notch Filter Design</h2>
+          <p>A <strong>notch filter</strong> filter is basically the opposite of a band pass filter, in that it rejects or stops a specific band of frequencies. Then a notch filter is also known as a “band stop filter”. To obtain the response of a notch filter from the basic state variable filter design, we have to sum together the high pass and low pass output responses using another op-amp summing amplifier, <span class="ntxt">A4</span> as shown.</p>
+          <h3>Notch Filter Circuit</h3>
+          <p><span class="text-center"><img src="../img/unit14/StateVariable/filter-fil127.gif" alt="notch filter" title="Notch Filter" width="446" height="146" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager"></span></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <div class="bottomspace">&nbsp;</div>
+          <p>Here to keep things simple we have assumed that the two input resistors, <span class="ntxt">R5</span> and <span class="ntxt">R6</span> as well as the feedback resistor, <span class="ntxt">R7</span> all have the same value of <span class="ntxt">10kΩ</span> the same as for <span class="ntxt">R3</span> and <span class="ntxt">R4</span>. This therefore gives the notch filter a gain of 1, unity.</p>
+          <p>The output response of the notch filter and bandpass filter are related with the center frequency of the bandpass response being equal to the point of zero response of the notch filter, and in this example will be 1kHz.</p>
+          <p>Also the bandwidth of the notch is determined by the circuits <span class="ntxt">Q</span>, exactly the same as for the pass band response. The downward peak is therefore equal to the center frequency divided by the -3dB bandwidth, that is the frequency difference between the -3dB points either side of the notch. Note that the quality factor <span class="ntxt">Q</span> has nothing to do with the actual depth of the notch.</p>
+          <p>This basic notch filter (band-stop) design has only two inputs applied to its summing amplifier, the low pass output, <span class="ntxt">V<sub>LP</sub></span> and the high pass output, <span class="ntxt">V<sub>HP</sub></span>. However, there are two more signals available for us to use from the basic state variable filter circuit, the band pass output, <span class="ntxt">V<sub>BP</sub></span> and the input signal itself, <span class="ntxt">V<sub>IN</sub></span>.</p>
+          <p>If one of these two signals is also used as an input to the notch filter summing amplifier along with the low pass and high pass signals, then the depth of the notch can be controlled.</p>
+          <p>Depending upon how you wanted to control the output from the notch filter section would depend upon which one of the two available signals you would use. If it was required that the output notch changes from a negative response to a positive response at the undamped natural frequency <span class="ntxt">ƒ<sub>o</sub></span> then the band pass output signal <span class="ntxt">V<sub>BP</sub></span> would be used.</p>
+          <p>Likewise, if it was required that the output notch only varies in its downward negative depth, then the input signal, <span class="ntxt">V<sub>IN</sub></span> would be used. If either one of these two additional signals was connected to the op-amp summing amplifier through a variable resistor then the depth and direction of the notch could be fully controlled. Consider the modified notch filter circuit below.</p>
+          <h3>Variable Notch Filter Depth</h3>
+          <p><span class="text-center"><img src="../img/unit14/StateVariable/filter-fil128.gif" alt="variable notch filter depth" title="Variable Notch Filter Depth" width="463" height="178" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" loading="eager"></span></p>
+          <p class="text-center">
+            <noscript>
+            </noscript>
+          </p>
+          <h2>State Variable Filter Summary</h2>
+          <p>The <strong>State Variable Filter</strong>, (<b>SVF</b>) circuit is a second-order active RC filter design that use multiple feedback techniques to produce three different frequency response outputs, namely: <em>Low Pass</em>, <em>High Pass</em> and <em>Band Pass</em> from the same single filter. The advantage of the state variable filter over other basic filter designs is that the three main filter parameters, Gain, <span class="ntxt">Q</span> and <span class="ntxt">ƒc</span> can be adjusted independently.</p>
+          <p>We have also seen here that the filter is also easy to tune as the corner frequency, <span class="ntxt">ƒc</span> can be set and adjusted by varying either <span class="ntxt">R</span> or <span class="ntxt">C</span> without affecting the filters damping factor. However, at higher corner frequencies and larger damping factors the filter can become unstable so is best used with low <span class="ntxt">Q</span>, less than 10, and at low corner frequencies.</p>
+          <p>The basic state variable filter design uses three op-amp sections to produce its outputs, but we have also seen that with the addition of a fourth op-amp section summing the low pass and high pass sections together, a notch (band-stop) filter output response can also be achieved at the desired center frequency.</p>
+        </div>
+      <!-- Socialbox --></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

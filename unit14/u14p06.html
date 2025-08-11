@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>Filter me this</h1>
+       <div class="image_left"> <a href="../img/unit14/OpAmp_LowPass.png" target="new"><img src="../img/unit14/OpAmp_LowPass.png" alt="" width="300" height="253" class="image_border" ></a>
+       </div> <!-- end of image_left div-->
+       <p>What if we play with the frequency response of the negative feedback? We get filters. These are different from the filters we experimented with in Unit 3 and 4 because they are <span class="term">active filters</span>. The filters we built earlier were passive filters. That means that all they did was reduce voltage. They reduced it more at some frequencies than others but they actually reduced the voltage (<em>at least some</em>) at all frequencies.</p>
+       <p>With op-amps we can easily create active filters. The circuit shown in figure 6-1 starts with and R1 and R2 value that give it a gain of one, so we get the same voltage in as out.
+        A gain of one is referred to as <span class="term">unity gain</span>. The addition of C1 means that high frequencies will pass through C1 (<em>because it is an easier path, less reactance</em>) so that:       
+       <ul>
+         <li> There is more negative feedback for higher frequencies.       
+           <ul>
+             <li>More feedback means less gain.</li>
+           </ul>
+         </li>
+         <li>There is less than unity gain for higher frequencies.</li>
+         <li>There is unity gain for lower frequencies.</li>
+        </ul>
+       <p>Though the example circuit has a gain of one for the lower frequencies, you can choose values for R1 and R2 to create any gain you want and still have less gain at higher frequencies. </p>
+       <p>The circuit shown in figure 6-1 is very common. Op-amps are very versatile, in fact you can often use the same op-amp for an audio circuit that you use for a radio frequency circuit. That way the manufacturer can sell more of them and the cost comes down. That also means that the op-amp can pass frequencies way above audio. There are actually a lot of those &quot;higher than audio&quot; frequencies floating around and they tend to get into audio equipment. They then get amplified and cause problems. By adding C1 and making it a small value (typically in the pF range) we can filter out anything above audio frequencies.</p>
+       <h1> Filter me that</h1>
+       <div class="image_right"> <a href="../img/unit14/OpAmp_HighPass.png" target="new"><img src="../img/unit14/OpAmp_HighPass.png" alt="" width="300" height="228" class="image_border" ></a> </div>
+       <p>As you hopefully remember from units 3 and 4 we can use an inductor and get the opposite filter. The same is true with active op-amp filters. Figure 6-2 shows a high pass filter created with an inductor in parallel with R2.</p>
+       <ul>
+         <li> There is more negative feedback for lower frequencies.
+           <ul>
+             <li>More feedback means less gain.</li>
+           </ul>
+         </li>
+         <li>There is less than unity gain for lower frequencies.</li>
+         <li>There is unity gain for higher frequencies.</li>
+       </ul>
+       <p>&nbsp;</p>
+       <p>Both of these options still create simple <span class="term">first order filters</span>. It is possible to create higher order filters and filters where the slope is adjustable.<strong> Keep reading to find out more.</strong></p>
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

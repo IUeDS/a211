@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.scopefont {
+	font-style: normal;
+	font-weight: 400;
+	background-color: #000000;
+	color: #FFDF0E;
+	font-size: small;
+}
+.scopefont_highlight {
+	font-style: normal;
+	font-weight: 400;
+	background-color: #FFDF0E;
+	color: #000000;
+	font-size: small;
+}
+

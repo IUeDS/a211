@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>Step 4: Tracing</h1>
+       <div class="image_right"></div> <!-- end of image_left div-->
+       <p>In this fourth step you will trace some paths through the circuit. In some cases the timing of this and step 3 can overlap or swap. If you are struggling with any portions of step 3 then it is worth trying this step for that portion of the circuit first to see if it helps you become un-stuck (<em>or perhaps less stuck? The order of these is not important, do whatever is easiest.</em>).
+       <div class="image_right"> <a href="../img/unit15/1176PreAmp_Signal PathAnimation.gif" target="new"><img src="../img/unit15/1176PreAmp_Signal PathAnimation.gif" alt="1176 limiter schematic" width="500" height="358" class="image_border" ></a></div>
+       <H2>Trace the signal</H2>
+       <p>I typically start by tracing the signal flow through the circuit. The signal refers to the audio and has to get from the input to the output. If you have identified all the sub-circuits in the previous step then this should not be too difficult. </p>
+       <p>The 1176 preamplifier example shown in figure 5-1 comes relatively simply from the sub-circuits except for the portion of the path that is indicated with the dashed line. This is the feedback path and might not be identified yet. I recommend that you draw (<em>with highlighters, markers, or colored pencils</em>) directly on the paper copy of your schematic for this. It is possible to do with something like Google draw, but experience has shown me that a paper copy works better for groups of students.</p>
+       <h2>Polarity</h2>
+       <p>Also in figure 5-1 you will see images that indicate the signal polarity at every part of the signal path. This is really important with audio circuits. This was the step in the process that I became certain of the "negative feedback" path and this step will often lead to more discoveries. Again, I would draw these directly on the paper schematic.</p>
+       <div class="line_break"></div>
+       <h2>Trace the DC Current Paths</h2>
+       <p>The signal path goes from the input of each sub-circuit to the output. You should remember from the current tracing that you did in earlier courses that the current path and signal path are different. On a basic common emitter circuit the signal path is base to collector while the DC current path (<em>conventional) </em>is collector to emitter with a tiny bit going base to emitter. If we ignore that tiny bit of current going base to emitter, the current path for each sub-circuit should be separate. </p>
+       <p>Figure 5-2 shows the DC current paths for the 1176 preamplifier. Note the path gong from the emitter of Q3 to the base of Q2. There was nothing biasing the base of Q2 when we listed the typical components. Tracing the DC path showed us where that DC was coming from to bias the base.</p>
+       <p>Figure 5-2 also shows the two components in the circuit that have AC flowing through them, C7 and C8.</p>
+       <div class="image_left"> <a href="../img/unit15/CurrentTrace.gif" target="new"><img src="../img/unit15/CurrentTrace.gif" alt="1176 limiter schematic" width="600" height="429" class="image_border" ></a></div>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       
+       <div class="image_left"> <a href="../img/unit15/1176PreAmpSubCircuit2.png" target="new"></a></div>
+       <p>&nbsp;</p>     
+      
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

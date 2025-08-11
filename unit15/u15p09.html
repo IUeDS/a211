@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>And now.....our circuit</h1>
+       <p>Let's take a look at our microphone preamplifier circuit (shown in figure 9-1) and use the circuit analysis method form the previous pages in this unit. We will start at the left side of the schematic and move right. I will talk how I arrive at each component function as well as defining the function. I will go through different methods of investigating the function from different components so that you can see the options.</p>
+       <div class="image_center">
+       		<img src="../img/unit15/ChanStrip_Preamp.png" alt="" width="800" height="329" class="image_border">
+            <br>
+        	<a href="../img/unit15/ChanStrip_Preamp.png" target="new">Click here for full size schematic image</a>
+       </div>
+       <h2>Let's start at the input. </h2>
+       <p>Our input is at J1. J in a schematic refers to a jack for connecting a plug. In this case it could be the XLR connector or a connector between the printed circuit board and the XLR. It has three pins just like an XLR and the numbering is the same. An image of both male and female XLR connectors is shown in figure 9-2.</p>
+       <div class="image_right">
+       		<a href="../img/unit15/xlr.jpg" target="new">
+            	<img src="../img/unit15/xlr.jpg" alt="" width="200" height="154" class="image_border">
+            </a>
+       </div>
+       <ul>
+       		<li><strong>Pin 1 = Ground</strong></li>
+       		<li><strong>Pin 2 = Hot</strong></li>
+       		<li><strong>Pin 3 = Cold</strong></li><br>
+        	<em>***note that pins 2 and 3 can be reversed depending on the equipment manufacturer***</em><br>
+	   </ul>
+	   <h1>Moving to the right.......</h1>
+       <div class="line_break"></div>
+       <p>With balanced circuits we often see the components in the same position for both hot and cold. In fact it is very important that these two paths be as similar as possible. In most cases that means that once you have defined the function of a component on either hot or cold, then you have defined it for the other path as well.</p>       
+       <h1 id="c101">C101,C102, and C103</h1>      
+       <p>The first components we come to are C101 and C102, both of which are 470pF and C103 which is 47pF.</p>  
+       <div class="image_right">
+       		<a href="../img/unit15/C101-C102.png" target="new">
+            	<img src="../img/unit15/C101-C102.png" alt="schematic" width="350" height="263" class="image_border">
+            </a>
+       </div>
+       <h2>How we figure it out.</h2>
+       <ol>
+           <li>These are capacitors, we start with what we know about capacitors:         
+             <ul>
+               <li>Capacitors block DC and allow AC to pass.</li>
+               <li>Capacitors allow high frequencies to pass easier than low.</li>
+               <li>Capacitive reactance <span class="equation">$x_{c} = \frac {1}{2\pi FC} $ </span></li>        
+               <li>Series capacitor creates a high pass filter.</li>     
+               <li>Parallel capacitor creates a low pass filter.</li>                
+             </ul>
+           </li>
+           <li>How are these capacitors connected?</li>
+               <ul>
+                <li><strong>C101 &amp; C102</strong>: They connect hot and cold together going through both C101 and C102. This path would allow high frequencies to go from hot to cold. Since hot and cold are opposite polarity the signals would cancel out. This would create a low pass filter, cutting  frequencies that would easily pass through the 470pF capacitors.</li>
+                <li><strong>C103:</strong> This capacitor connects both Hot and Cold to chassis GND through C101 or C102. Again this creates a low pass filter, cutting  frequencies that would easily pass through the 470pF and 47pF capacitors.</li>
+                </ul>
+             <li>What else can we determine?
+             	<ul>
+                	<li>As a rule (remember this from unit 13?) capacitors with a value in pF will pass frequencies above audio. This makes sense in this case because it means that frequencies above audio, that we don't care about, are canceled before they are amplified.</li>
+             	</ul>
+             </li>
+          </ol>
+          <div class="basicconcept">
+   		 		<div class="basicconcept_header">The function of C101, C102, and C103</div>
+            	<div class="basicconcept_body">C101, C102, and C103 are there to cancel out frequencies above audio before they are amplified.</div>
+       	  </div> <!-- end of basicconcept div --><h2></h2>
+       	  <div class="line_break"></div>
+          <div class="line_break"></div>
+          <div class="image_right">
+          	<a href="../img/unit15/Phantom.png" target="new">
+            	<img src="../img/unit15/Phantom.png" alt="schematic" width="350" height="263" class="image_border">
+            </a>
+          </div>
+       	  <h1 id="sw101">SW101, R101, R102, R104, and C100</h1>
+       	  <p>Taking a look up from C101 and C102 we see SW101 and the components connected to it. Even though it is not labeled we can see that SW101 either connects or dis-connects +48V from Hot and Cold. So this is the phantom power switch.</p>
+        <div class="line_break"></div>
+        <h2>Component by component.</h2>
+        <ul>
+        	<li style="margin: 10px"><strong>SW101: </strong>When this switch is in the position drawn currently on the schematic +48V is connected to R101 and from there to R102 and R104. As stated above this determines if +48V is sent to Hot and Cold or not. When the switch is down, instead of voltage connecting to R102 and R104 they connect to chassis GND. <br>
+         		Why connect to chassis GND when +48V is turned off?<br>
+        		This is one of those situations when we want to separate AC and DC in our thinking. For AC (audio) that +48V connection represents a short to GND. <em>Why is that?</em> Think about the DC power supplies we studied in unit 8, what was typically the last component in the circuit?
+			<div class="image_right">
+            	<img src="../../A112/img/unit08/figure6-1.png" alt="" width="250" height="81" class="image_border">
+            </div>
+				There was always a capacitor in parallel with the output as shown in figure 9-5. These will be large value capacitors to get rid of ripple (fluctuations in the DC). That means they have a very low reactance for audio frequencies and act like a short circuit to ground, for audio frequencies. By connecting R102 and R104 to GND when +48V is not connected, the circuit looks the same to audio frequencies whether +48V is turned on or off.</li>
+			<li style="margin: 10px"><strong>R101: </strong>With R101 we have a small resistance of 200Ω in series with the +48V. This resistor provides isolation between multiple channels using the same +48V supply. Since there is only one channel connected to this 48V supply this component could have been left off. It was included as an example of a typical circuit.</li>
+			<li style="margin: 10px"><strong>R102 &amp; R104: </strong>We need to send the same DC voltage (+48) to both the Hot and Cold audio paths. 
+  				<div class="question_and_answer_full">
+					<div class="question_button">
+    					<div class="question_button_header">If we connect both the Hot and Cold paths directly to R101 what would happen?<br>
+        					<span class="question_button_subheader">(click to reveal answer)</span>
+                        </div>
+                    </div>
+         			<div class="revealed_answer">
+         				<div class="revealed_answer_header_wide_lower text-align-left">We would be connecting the Hot and Cold audio paths to the same point.<br>
+So we would be connecting them together.<br>
+       	     			Since they have opposite polarity signals they would cancel out and we would get <strong>NO AUDIO</strong>!<br> Without audio, the phantom +48V is not very useful.
+                        </div>
+                    </div>
+                </div>
+            	<p>So we need something to separate the hot and cold audio paths while still allowing the +48V to connect them. R102 and R104 serve that function.</p>
+            	<p><em>Wait!, Why are they 6.8kΩ?</em><br>
+           	    It's all about protecting the circuit, if the mic input were shorted. This is something that happens, often while plugging in a connector. If Hot and Cold were shorted to GND, then R102 & R104 (in parallel as far as the +48V is concerned) would need to drop the entire 48V.</p>
+            	<p>So we have 2 resistors in parallel that need to drop 48V. We have same value resistor for Hot and Cold so our total resistance (because they are in parallel) will be half of each resistor, so 3.4kΩ. We know that the +48V supply needs to be able to supply at least 14mA of current.</p>
+            	<p>Our buddy Ohm's law tells us: $48V = 14mA * R$ which means $R = 3.429kΩ$<br>
+        Rounded to the closest standard resistor value we get 3.4kΩ.</p>
+        	</li>
+            <li><strong>C100:</strong> C100 is a capacitor connected from a DC voltage to GND. The DC cannot pass through it. One typical mistake beginners make when analyzing a circuit would be to say that C100 is blocking the DC from going to GND. The fault with that idea is that <em>if C100 were not there</em> then the DC would have no path to GND so the capacitor would not have that function. Remember that capacitors block DC <em>while</em> allowing AC to pass. In this case it sends any AC (ripple, noise, or audio) to GND. This will get rid of any noise added as the +48V travels through the wiring as well as audio added from other preamp channels using this same +48V supply.</li>
+        </ul>            
+            <div class="basicconcept">
+              <div class="basicconcept_header">The function of SW101,R101, R102,  R104, and C100</div>
+              <div class="basicconcept_body">
+                <strong>SW101</strong> is there to turn on or off the +48V phantom power.<br>
+                <strong>R101</strong> is there to isolate multiple channels from each other.<br>
+         		<strong>R102</strong> and <strong>R104</strong> are there to supply +48V to the Hot and Cold audio paths without shorting them. Their value is set so that, if they are shorted to GND, only 14mA of current is drawn from the +48V supply.<br>
+         		<strong>C100</strong> is there to filter any AC from the +48V supply.
+         	  </div>
+         </div>
+         <div class="line_break"></div>
+         <h1 id="r103">R103</h1>
+         <div class="image_right">
+         	<a href="../img/unit15/R103.png" target="new">
+            	<img src="../img/unit15/R103.png" alt="schematic" width="350" height="263" class="image_border">		
+            </a>
+         </div>
+         <p>R103 connects between Hot and Cold. What the microphone "sees" as the input impedance when it sends signal to the preamplifier is the impedance between Hot and Cold. Being connected between Hot and Cold, R103 sets this input impedance. The actual input impedance is R103 in parallel with everything to the right of it, including the I.C. input impedance. The I.C. input impedance we can find from the datasheet and it is over 1MΩ; C104/C105 and R105/R106 only increase that already large number. The 2.7kΩ of R103 in parallel with 1MΩ will be made slightly smaller but, effectively the input impedance is 2.7kΩ.</p>
+         <div class="basicconcept">
+           <div class="basicconcept_header">The function of R103</div>
+           <div class="basicconcept_body"> <strong>R103</strong> sets the input impedance of the circuit.</div>
+         </div>
+         <div class="line_break"></div>
+         <h1 id="c104">C104 & C105</h1>
+         <div class="image_right">
+         	<a href="../img/unit15/C104C105.png" target="new">
+            	<img src="../img/unit15/C104C105.png" alt="schematic" width="350" height="263" class="image_border">
+            </a>
+         </div>
+         <h2>What do we know about capacitors?</h2>
+         <ol>
+         	<li>Capacitors block DC</li>
+         	<li>Capacitors allow AC to pass</li>
+         	<li>Capacitors allow higher frequencies to pass more easily than lower frequencies.</li>
+         	<li>Reactance $x_{c} = \frac {1}{2\pi FC} $.</li>
+         	<li>A capacitor in series creates a high pass filter.</li>
+         	<li>A capacitor in parallel creates a low pass filter.</li>
+         	<li>Capacitors in series add using inverse rule $\frac {1}{C1} + \frac{1}{C2} + ..... = \frac{1}{CT}$.</li>
+         	<li>Capacitors in parallel simply add $C1 + C2 + ... = CT$</li>
+         </ol>
+         <h2>How are these capacitors connected and what does that mean?</h2>
+        <p>C104 and C105 are connected in series with the audio path, C104 in series with Hot and C105 in series with Cold.</p>
+        <ul>
+            <li>They will block DC.
+               <ul>
+                 <li>Would there be DC at this point in the circuit?
+                   <ul>
+                     <li>What about the +48V we just investigated?</li>
+                   </ul>
+                 </li>
+               </ul>
+            </li>
+             <li>They could affect frequency response as high pass filters.</li>
+        </ul>
+        <div class="basicconcept">
+          <div class="basicconcept_header">The function of C104 and C105</div>
+              <div class="basicconcept_body">
+           		<strong>C104</strong> and <strong>C105</strong> block DC (+48V) from getting to the inputs of the mic preamplifier I.C. They could also be used to affect frequency response as high pass filters.
+              </div>
+           </div>
+           <div class="line_break"></div>
+           <h1 id="d101">D101-D104 and R105/R106</h1>
+           <div class="image_right">
+           		<a href="../img/unit15/Diodes.png" target="new">
+                	<img src="../img/unit15/Diodes.png" alt="schematic" width="350" height="263" class="image_border">
+                </a>
+           </div>
+           <h2>What do we know about diodes?</h2>
+          <ol>
+             <li>Diodes only pass current:</li>
+              <ul>
+               <li>In one direction. (conventional current anode to cathode)</li>
+               <li>When the diode is forward biased. (anode is more positive than the cathode)</li>
+               <li>When the forward break over voltage is reached. (typical 0.5-1V)</li>
+              </ul>
+             <li>When diode is passing current it will drop the forward break over voltage.</li>
+             <li>When diode is not forward biased it can be thought of as an open switch.</li>
+          </ol>         
+         <h2>When would these diodes pass current?</h2>
+         <ul>
+           <li>D101 &amp; D103: 
+             <ul>
+               <li>The cathode of these diodes are connected to +15V.</li>
+               <li>That means that roughly +15.5V is required on the Hot or Cold signal paths for the diodes to pass current.</li>
+               <li><em>When would that voltage ever be reached?</em></li>
+             </ul>
+           </li>
+           <li>D102 &amp; D104
+             <ul>
+               <li>The anode of these diodes is connected to -15V.</li>
+               <li>That means that roughly -15.5V is required on the Hot or Cold signal paths for the diodes to pass current.</li>
+               <li><em>When would that voltage ever be reached?</em></li>
+             </ul>
+           </li>
+         </ul>
+        <h2>What type of voltage/current is at this part of the circuit?</h2>
+         <p>C104 and C105 block any DC from earlier in the circuit so there will only be AC at this point in the circuit. With typical microphone level signals at 0.1V<sub>PK</sub> the +/-15.5V for froward bias seems way beyond what would appear here.</p>
+         <div class="question_and_answer_full">
+           <div class="question_button">
+             <div class="question_button_header">What about line level signals?
+Those might get connected.<br>
+               <span class="question_button_subheader">(click to reveal answer)</span></div>
+           </div>
+           <div class="revealed_answer">
+             <div class="revealed_answer_header_wide_lower text-align-left">The nominal line level is +4dBu which has a peak of +/- 1.736V<sub>PK</sub>.<br>
+The standard maximum for line level (rarely encountered) is +24dBu, which would be 17.36V<sub>PK</sub>. <br>
+So in that extreme case of +24dBu D101-104 would limit the input voltage. </div>
+           </div>
+         </div>
+         <h2>What about +48V?</h2>
+         <p><em>Wait, C104 and C105 block DC so the +48V can't get to this part of the circuit. </em></p>
+        <p>Let's take a look at what happens when we turn on the +48V with SW101. </p> 
+        <div class="video_center">
+            <!--<div id="kaltura_player_1443721990" style="width: 400px; height: 333px;" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                <span itemprop="name" content="ChannelStrip_Diodes"></span>
+                <span itemprop="description" content=""></span>
+                <span itemprop="duration" content="359"></span>
+                <span itemprop="thumbnail" content="http://cfvod.kaltura.com/p/1751071/sp/175107100/thumbnail/entry_id/1_npfuovr9/version/100000/acv/151"></span>
+                <span itemprop="width" content="400"></span>
+                <span itemprop="height" content="333"></span>
+            </div>
+			<script src="https://cdnapisec.kaltura.com/p/1751071/sp/175107100/embedIframeJs/uiconf_id/31364942/partner_id/1751071?autoembed=true&entry_id=1_npfuovr9&playerId=kaltura_player_1443721990&cache_st=1443721990&width=400&height=333"></script>-->
+            <iframe src="https://cdnapisec.kaltura.com/p/1751071/sp/175107100/embedIframeJs/uiconf_id/26683571/partner_id/1751071?iframeembed=true&playerId=kaltura_player_1466453265&entry_id=1_npfuovr9&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
+            <br>
+            <a href="http://www.kaltura.com/tiny/uccty" target="_blank">View video in a new tab (option for full screen)</a>
+		</div>     
+         <div class="basicconcept">
+           <div class="basicconcept_header">The function of D101-D104, R105, and R106</div>
+           <div class="basicconcept_body">
+             <ul>
+               <li> <strong>D101-D104 </strong>limit the spikes created when +48V is turned ON (+48 spike) or OFF (-48V spike) by limiting the peak to roughly +/-15.5V.<br>
+                 They would also limit very large line level signals if connected to the Mic input.
+               </li>
+               <li><strong>R105 </strong>&amp;<strong> R106 </strong>are there as current limiting resistors to reduce current when those spikes are being limited.</li>
+             </ul>
+           </div>
+         </div>
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

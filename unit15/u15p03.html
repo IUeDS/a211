@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>Step 2: What is this stuff?</h1>
+       <div class="image_right"></div> <!-- end of image_left div-->
+       <div class="image_right"> <a href="../img/unit15/1176PreAmpZoom.png" target="new"><img src="../img/unit15/1176PreAmpZoom.png" alt="1176 limiter schematic" width="400" height="286" class="image_border" ></a> </div>
+       <p>The second step may seem too simple to worry about, but it is worth doing at this point and should not take very much time. You want to go through every component in the schematic and identify it, listing the basic properties of that component.
+       <p>The table shows this component listing for the preamp portion of the 1176 limiter shown in figure 3-1. Your version of this table will serve as a reference for you as you work on your schematic. it is something you should have printed out next to y our printed schematic.
+       <table class="two_tone_table">
+         <thead>
+           <tr>
+             <th width="118">Component</th>
+             <th width="541">Component IDs</th>
+             <th width="541">Description</th>
+             <th width='421'>Rules</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td class='table-align-left'><strong>Resistors<br>
+             <span class="image_left no_caption"><img src="../img/unit02/resistor.gif" width="100" height="31"  class="image_border"></span></strong></td>
+             <td class='table-align-left'>R6, R7 T8, R9, R10, R11, R12, R13, R14, R15, R17, R18, R19, R20, R21</td>
+             <td class='table-align-left'><p>drops voltage with current flow</p></td>
+             <td class='table-align-left'><ul>
+               <li>$ {V}={I}{R} $</li>
+               <li>series resistors add $ R_{total} = R_1 + R_2 + R_3 + ..... $</li>
+               <li>Parallel resistors add  $ \frac {1}{R_{total}} = \frac {1}{R_1} + \frac {1}{R_2} + \frac {1}{R_3} ..... $</li>
+             </ul></td>
+           </tr>
+           <tr>
+             <td class='table-align-left'><strong>Potentiometer</strong><strong><span class="image_left no_caption"><img src="../img/unit02/potentiometerSchematic.png" width="100" height="81" class="image_border"></span></strong></td>
+             <td class='table-align-left'>R16</td>
+             <td class='table-align-left'><p>resistor with adjustable wiper</p></td>
+             <td class='table-align-left'><p>Wiper moves toward CCW when turned counterclockwise and toward CW when turned clockwise</p>
+             <p>Think of as a voltage divider.</p></td>
+           </tr>
+           <tr>
+             <td class='table-align-left'><strong>Capacitors<br>
+             <span class="image_left no_caption"><img src="../img/unit04/figure1-3.png" width="100" height="43" class="image_border"></span><br>
+             <span class="image_left no_caption"><img src="../img/unit04/figure1-4.png" width="100" height="43" class="image_border"></span></strong></td>
+             <td class='table-align-left'>C1, C2, C3, C4, C5, C6, C7, C8, C9, C27</td>
+             <td class='table-align-left'><p>drops different voltage for different frequencies</p></td>
+             <td class="table-align-left">Reactance $x_{c} = \frac {1}{2\pi FC} $</td>
+           </tr>
+           <tr>
+             <td class='table-align-left'><strong>NPN Transistor<br>
+             <span class="image_left no_caption"><img src="../../A112/img/unit09/figure2-3.png" width="100" height="81" class="image_border"></span></strong></td>
+             <td class='table-align-left'>Q2, Q3, Q4</td>
+             <td class='table-align-left'>small current into base controls large current from collector to emitter</td>
+             <td class='table-align-left'><ul>
+               <li>5% current at base, 95% at emitter, 100% at collector</li>
+               <li>Emitter must be most <span class="blue">negative</span><span class="table-align-left">,</span>
+               <li>The closer the base voltage is to the collector the larger the current, the closer to the emitter the smaller the current</li>
+             </ul></td>
+           </tr>
+           <tr>
+             <td class='table-align-left'><strong>JFET<br>
+             </strong><strong><span class="image_left no_caption"><img src="../../A112/img/unit11/njfet_schem.png" width="100" height="131" class="image_border"></span></strong></td>
+             <td class='table-align-left'>Q1</td>
+             <td class='table-align-left'>voltage at gate controls current from drain to source, drain and source are reversible</td>
+             <td class='table-align-left'>Voltage at gate (more negative than Source) reduces current flow between source and drain</td>
+           </tr>
+         </tbody>
+       </table>
+       <p>&nbsp;</p>     
+      
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

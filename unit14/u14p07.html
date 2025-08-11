@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>Slippery slope?</h1>
+       <div class="image_left"> <a href="../img/unit14/OpAmp_ButterworthLowPass.png" target="new"><img src="../img/unit14/OpAmp_ButterworthLowPass.png" alt="" width="400" height="282" class="image_border" ></a></div>
+       <p>Like the passive filters from units 3 and 4, the active filters from page 6 are <span class="term">first order filters</span>. Because of that they have a slope of 6dB/octave (as discussed in unit 4). It is possible to create higher order filters, and a steeper slope. One of the most common examples of this is the<span class="term"> butterworth filter</span>. A low pass butterworth filter is shown in figure 7-1. The slope of this filter is set by the ratio of the value of the two capacitors.</p>        
+       <p>The component values in this circuit allow you to set:</p>
+         <li><span class="term">Cutoff Frequency</span> (f<sub>c</sub>): Cutoff frequency is the frequency where the filter starts to have an effect. In this case when the high frequencies are cut by -3dB. R1 and R2 are the same value, R in the formula is the value one of the resistors.<br>
+ $f_{c} = \frac {1}{2\pi R \sqrt{C_{1}C_{2}}} $<br>
+ <br>
+        </li>
+         <li><span class="term">Filter Q</span>: Filter Q, also called  Q factor (Quality factor). Q indicates how wide of a range around the cutoff  frequency is affected by the filter. </li>
+         <ul>
+           <li>A high Q factor  indicates that the filter affects a smaller area of frequencies around fC. </li>
+           <li>A low Q factor  indicates that the filter affects a larger  area of frequencies around fC. </li>
+           <li>Q is the inverse  of bandwidth. </li>
+         <li>$Q = \frac {1}{2} \sqrt{\frac {C_{2}}{C_{1}}}$</li>
+       </ul>
+		  
+      <h1>High Pass, you pass, everybody pass?</h1>
+      <div class="image_right"> <a href="../img/unit14/OpAmp_ButterworthHighPass.png" target="new"><img src="../img/unit14/OpAmp_ButterworthHighPass.png" alt="" width="400" height="282" class="image_border" ></a></div>
+      <p>You can also create a high pass butterworth filter, as shown in figure 7-2.  Again we can adjust this circuit by changing component values:</p>
+        <ul>
+         <li><span class="term">Cutoff Frequency</span> (f<sub>c</sub>): Cutoff frequency is the frequency where the filter starts to have an effect. In this case when the high frequencies are cut by -3dB. C1 and C2 are the same value, C in the formula is the value one of the capacitors.<br>
+ $f_{c} = \frac {1}{2\pi C \sqrt{R_{1}R_{2}}} $<br>
+ <br>
+        </li>
+         <li><span class="term">Filter Q</span>: Filter Q, also called Q factor (Quality factor). Q indicates how wide of  a range around the cutoff frequency is affected by the filter. <br>
+  $Q = \frac {1}{2} \sqrt{\frac {R_{1}}{R_{2}}}$          <br>
+         </li>
+       </ul>
+       
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

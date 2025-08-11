@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <h1>And now.....our circuit, part 2</h1>
+       <p>We've gotten about half way from the input to the I.C. Let's keep going.</p>
+       <div class="image_center"><a href="../img/unit15/ChanStrip_Preamp.png" target="new"><img src="../img/unit15/ChanStrip_Preamp.png" alt="" width="800" height="329" class="image_border"></a></div>
+       <h1>Switches, please</h1> 
+       <div class="image_right"><a href="../img/unit15/Switches.png" target="new"><img src="../img/unit15/Switches.png" alt="schematic" width="400" height="230" class="image_border"></a></div>     
+       <p>Switches simply connect some things or don't. The best way to investigate what switches do is to trace the path with the switch in each position and see how it is different.</p>  
+       
+       <h2>SW102</h2>
+       <p>Tracing the path of SW102 we see that it simply chooses the Hot and Cold signal paths from either the components we discussed on the last page <em>OR</em>J2, which is the line input.</p>
+       <h2>SW103</h2>
+       <p>If you trace the paths for SW103 you will see that it swaps the Hot and Cold signal paths. This switch is not labeled in the schematic, but on the device would be labeled "polarity".</p>
+       
+             <div class="basicconcept">
+   		 <div class="basicconcept_header">The function of SW102 &amp; SW103</div>
+            <div class="basicconcept_body">
+              <p><strong>SW102:</strong> Selects either the microphone input path (through R105/R106, etc.) <br>
+              <em>or</em> the line input path (through R107 &amp; R108).</p>
+              <p><strong>SW103:</strong> Swaps the Hot and Cold signal paths to invert the polarity of the audio signal.</p>
+            </div>
+       </div> <!-- end of basicconcept div -->
+       <div class="line_break"></div>
+       <h1>R112 & R113</h1>
+       <div class="image_right"><a href="../img/unit15/R112R113.png" target="new"><img src="../img/unit15/R112R113.png" alt="schematic" width="350" height="291" class="image_border"></a></div>
+       <p>With this balanced line there are two ways of looking at and measuring what is happening. 
+     	<ol>
+        <li><span class="term">Differential mode</span>: This is the way the audio in this circuit works, we get an output that is the difference between the Hot and Cold signal paths.
+          <ul>
+            <li>Signals that are different between Hot and Cold end up as higher voltages at the output. These are called <span class="term">differential mode signals</span>.</li></ul></li>
+             <li><span class="term">Common mode</span>: +48V phantom power in this circuit is common, it is the same on both the Hot and Cold signal paths.
+               <ul>
+            <li>Signals that are the same on both Hot and Cold are canceled out and appear as lower voltages at the output. These are called <span class="term">common mode signals</span>. Common mode signals are the reason for balanced lines. Noise that is added to the audio signal as it is transferred over cables should get on to both the Hot and Cold signal paths equally and thus be canceled out. <em>More on this in A212/A512.</em></li>
+             </ul>
+             </li>
+        </ol>
+     	<p>Earlier we saw that R103 sets the input impedance of the circuit. This is the <span class="term">differential mode input impedance</span>. To set the <span class="term">common mode input impedance</span> for the Hot signal path we need something connected between Hot and ground. For Cold we need something connected between Cold and ground. </p>
+     	<ul>
+     	  <li>We already saw C101,C103, and C103 which are connected between Hot/Cold and ground. They are only a path for frequencies above audio however, so they only affect eh common impedance for those frequencies. We want that common mode input impedance to be very low so that those frequencies are reduced in voltage.</li>
+     	  <li>Right next to the I.C. in the schematic we see R112 and R113 which connect Hot and Cold to ground. These set the common mode input impedance.
+     	    <div class="basicconcept">
+     	      <div class="basicconcept_header">The function of R112 &amp; R113</div>
+     	      <div class="basicconcept_body">
+     	        <strong>R112</strong> and <strong>R113</strong> set the common-mode input impedance.
+   	        </div>
+   	      </div>
+     	  </li>
+   	    </ul>
+       <div class="line_break"></div>
+       <div class="image_right"><a href="../img/unit15/C106C107.png" target="new"><img src="../img/unit15/C106C107.png" alt="schematic" width="350" height="291" class="image_border"></a></div>
+       <h1>R114, R115, C106, and C107</h1>
+       <p>Now we look at the caps and resistors connected at the +V and -V connections to the preamp I.C. The +V and -V connections provide the DC power supply voltages to the I.C.</p>      
+       <h2>What do we have?</h2>
+       <ul>
+       <li>We have a resistor in series with the +V and the -V. </li>
+       <ul>
+         <li>These resistors are only 10Ω. </li>
+         <li>From the datasheet we can see that the I.C. draws a maximum of 8mA. At 8mA a 10Ω resistor will drop 0.08V. That's not enough to make any difference.</li>
+       </ul>
+        <li>We have a capacitor connected from the +V and -V connections of the I.C. to ground.</li></ul>
+        <h2>What does it mean?</h2>
+        <ul>
+        <li><p><strong>Capacitors:</strong> Let's start with the easy ones, the capacitors. A capacitor connected from a DC voltage to ground, that's something we have seen before. In unit 8 (power supplies) we saw capacitors used to filter ripple from rectified AC, making a nice flat line DC.</p>
+        <p>The +/-15V DC would have already had the ripple filtered out. It has to travel through wires or printed circuit traces to get to the I.C., however. Along the path it takes to get to the I.C. noise can be added from external interference or even other parts of the channel strip circuit. C106 and C107 are there to get rid of anything that is not DC so that the I.C. has a nice clean DC power source.</p></li>
+        <li><strong>Resistors:</strong>The 10Ω resistors don't have as obvious of a reason for being there. There are a number of I.C.s in this circuit, all connected to the +/-15V rails for DC power. If any of those I.C.s has a serious freak-out that can affect the DC power in a way that could damage the other I.C.s. These 10Ω resistors act as current limiting resistors and even (in extraordinary bad situations) "fuses" that disconnect the I.C.</li></ul>
+          <div class="basicconcept">
+            <div class="basicconcept_header">The function of R114, R115, C106, and C107</div>
+            <div class="basicconcept_body"><strong>R114</strong> and <strong>R115:</strong> Isolate the I.C. from the power supply rails to protect other I.C.s.<br>
+            <strong>C106</strong> and <strong>C107:</strong> Filter noise from +/-15V power rails.</div>
+          </div>
+          <div class="line_break"></div>
+          <div class="image_right"><a href="../img/unit15/C106C107.png" target="new"><img src="../img/unit15/gainpot.png" alt="schematic" width="350" height="291" class="image_border"></a></div>
+          <h1>VR101, R110, R111, and C108</h1>
+        <p>Your experiments with the THAT1512 I.C. let you experience what the resistance connected between RG1 (pin 1) and RG2 (pin 8) do. They set the gain of the preamplifier.</p>
+        <p><ul>
+          <li>VR101 allows the resistance between RG1 and RG2 to change. This is the control that the user would adjust.</li>
+          <li>R110 changes the taper of the gain control (VR101). In order for the control to change gain in a way that feels natural to a human it should be a reverse logarithmic taper. Those are difficult to obtain so a &quot;cheat&quot; was used. Having a 20kΩ resistor connected from CW to CCW of a 20kΩ linear taper potentiometer will give an approximation of a 10kΩ reverse logarithmic taper potentiometer.</li>
+          <li>The smaller the resistance of RG, the higher the gain. The datasheet tells us that RG=22Ω gives a gain of 47dB. R111 sets the minimum value of RG to 22Ω for a maximum gain for the preamp of 47dB. (Changing R111 to 5Ω would change the maximum gain to 60dB.)</li>
+          <li>C108 is there to block DC from the gain control path. It is large to allow all audio frequencies to pass.</li>
+        </ul>
+        <div class="basicconcept">
+          <div class="basicconcept_header">The function of VR101, R110, R111, and C108</div>
+          <div class="basicconcept_body">
+            <p><strong>VR101</strong> and <strong>R110</strong>: VR101 and R110 combine to set the preamplifier gain. Together they approximate a reverse logarithmic taper potentiometer which is required for the preamplifier.<br>
+              <strong>R111</strong>: Sets the maximum gain of the preamplifier.<br>
+            <strong>C108</strong>: Blocks DC from VR101/R110. </p>
+          </div>
+        </div></p>
+        <div class="line_break"></div>
+            <h1>The star</h1>
+        <p>U101 is the microphone preamplifier I.C. and it's purpose is to amplify microphone signal to line level. This is clear based on what we have done so far but might not be as you work through your circuits. With integrated circuits you have to do the research and find a datasheet to know for sure what the I.C. does and how it should be connected.</p>
+        <div class="line_break"></div>
+            <h1>and finally........C109</h1>
+            <p>hmmm.....a capacitor in series with the audio path (now an unbalanced path). </p>
+            <div class="basicconcept">
+              <div class="basicconcept_header">The function of C109</div>
+              <div class="basicconcept_body"><strong>C109:</strong> Block DC from getting into or out of the microphone preamplifier I.C.</div>
+            </div>
+            
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

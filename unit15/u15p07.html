@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+        <!-- edit styles for two tone table, just for this page -->
+        <style>
+			.two_tone_table_left tr td:first-child {
+				min-width: 0px;
+			}
+			
+			.two_tone_table_left {
+				clear: both;
+			}
+		</style>
+        
+        
+       <h1>Channel Power!</h1>
+       <p>We are going to investigate the circuit analysis process by looking at a channel strip circuit. This circuit was designed for this class to illustrate some new circuit ideas as well as the analysis process. I recommend printing out a paper copy of the schematic that you can makes notes on and refer to. This schematic is available <a href="../media/unit15/A211ChanStrip_schematic.pdf" target="new">here</a>.</p>
+       <div class="image_right"><a href="../img/unit15/ChanStrip_Power.png" target="new"><img src="../img/unit15/ChanStrip_Power.png" alt="Channel strip power supply schematic" width="400" height="143" class="image_border"></a></div>
+       <p>We will begin with the power supply section of the circuit shown in figure 7-1. But first...............</p>
+       <div class="line_break"></div>
+       <h1>The Old Way</h1>
+       <div class="image_right"> <img src="../../A112/img/unit08/figure7-2.png"  alt="Voltage regulator" width="200" height="164" class="image_border"/> </div>
+       <p>Way back in Unit 8 when voltage regulation was discussed an I.C. version of a voltage regulator was briefly mentioned. Since this was before OpAmps or transistors it could not be discussed in detail. These "three-legged" voltage regulators (as shown in figure 7-2) are very common in electronics, however and are worth understanding. Because they are I.C.s we do not need to know more than how to connect them and what they do, however, understanding how they work will help understand the benefits of the I.C. we are using in the channel strip power supply.</p>
+       <div class="image_left"><a href="../img/unit15/Vreg_IC.png" target="new"><img src="../img/unit15/Vreg_IC.png" alt="Voltage regulator schematic" width="400" height="198" class="image_border"></a></div>
+       <p>Figure 7-3 shows a simplified schematic for one of these voltage regulators.
+    
+       
+       
+        <p>The input voltage can be reduced to provide a lower regulated voltage at the output. The transistor will use need some of the voltage so there needs to be more at the input than the desired output. The output voltage must be the same polarity as the input. For instance if you want a negative voltage output you must have a negative voltage input (<em>as well as a negative voltage regulator</em>).        
+        <ul>
+          <li>The output voltage is compared to a reference voltage by the op-amp.
+            <ul>
+              <li>remember that the OpAmps will output the difference between + and - inputs.</li>
+            </ul>
+          </li>
+          <li>The output of the OpAmps controls the Darlington pair transistors to set the output voltage.</li>
+        </ul>
+        <p>This works very well and was the way most power supplies were built prior to the year 2000. Since then more and more electronic devices utilize a new device like the one we use in our channel strip.</p>
+        <div class="line_break"></div>
+        <h1>Let's save energy!</h1>
+        <p>Modern electronic devices are not only smaller but they are more efficient, els of the electricity that they take in is wasted. On of the ways this is done is through the use of <span class="term">switch mode power supplies</span> (SMPS). I will give an overview of the concept behind the switch mode power supply but not get in great detail.         
+        <p>In our channel strip circuit we are using a DC-DC converter (DC to DC converter). This uses the same concept as a switch mode power supply but as a switch mode voltage regulator.        
+        <div class="image_left"><img src="../img/unit15/wallwart.jpg" alt="Wall wart power supplies" width="200" height="216" class="image_border"></div>
+        <p>Our channel strip circuit needs three voltages: +15, -15, and +48. We start with a 48V<sub>DC</sub> external power supply (aka Wall Wart, see image 7-4). From this we could use a 15V &quot;three-legged&quot; voltage regulator such as an LM7815 to reduce that +48V<sub>DC</sub> to +15V<sub>DC</sub>. That extra 33V, however, would be converted to heat and (since we are not building a heater) be wasted. There is also no way to get -15V using a simple I.C. voltage regulator.        
+        <p>With our DC-DC converter, however, we can input +48VDC and get +15V<sub>DC</sub> and -15V<sub>DC</sub> out. The I.C. doesn't waste the extra voltage, instead it simply takes what it needs. Switch mode regulators and power supplies can have efficiencies of 90% or more. that means that only 10% of the energy is wasted. In our I.C. example above that wasted 33V meant an efficiency of under 32% while wasting 68% of the energy.        
+        <h2>How it works</h2>
+        <p>With a switch mode regulator (or power supply) a transistor is used to switch the input DC on and off. This is typically done with a MOSFET and really fast (10-100kHz). 
+                   
+        This creates a pulse (square wave). Control circuitry determines how long the circuit is turned on.
+        <ul>
+          <li>If the transistor is on for longer amount of time the output voltage will be higher. (figure 7-5)</li>
+          <li>If the transistor is on for shorter amount of time the output voltage will be lower. (figure 7-6)</li>
+          <li>The less time the transistor is on, the less energy the circuit uses.</li>
+        </ul>
+        <div class="image_left"><a href="../img/unit15/SMPS_50duty.png" target="new"><img src="../img/unit15/SMPS_50duty.png" width="400" height="353" class="image_border"></a></div>
+        <div class="image_right"><a href="../img/unit15/SMPS_10duty.png" target="new"><img src="../img/unit15/SMPS_10duty.png" width="400" height="353" class="image_border"></a></div>
+        <div class="line_break"></div>
+        <h1>Our Circuit</h1>
+        <div class="image_right"><a href="../img/unit15/ChanStrip_Power.png"><img src="../img/unit15/ChanStrip_Power.png" alt="Channel strip power supply" width="600" height="214" class="image_border"></a></div>
+        <p>Figure 7-7 shows the power supply circuit for our channel strip. The square I.C. labeled "U1" in the middle is the DC-DC converter.
+
+        The table below shows the function of the rest of the components.        
+        <table class="two_tone_table_left">
+          <thead>
+          <tr>
+              <th>ID</th>
+              <th>Type</th>
+              <th>Function</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>JP</td>
+              <td class="two_tone_table_left">connector</td>
+              <td>Connects +48 &quot;wall wart&quot; to power supply</td>
+            </tr>
+            <tr>
+              <td>F1</td>
+              <td>fuse</td>
+              <td>Dis-connects circuit when current is to high so that expensive components (U1) aren't damaged.</td>
+            </tr>
+            <tr>
+              <td>D1</td>
+              <td>LED</td>
+              <td>Indicates that Channel Strip is on.</td>
+            </tr>
+            <tr>
+              <td>R1</td>
+              <td>Resistor</td>
+              <td>Current limiting resistor for D1. It drops the rest of the 48V that the LED does not use, roughly 45V.</td>
+            </tr>
+            <tr>
+              <td>C1</td>
+              <td>Capacitor</td>
+              <td>Filters ripple. Even though the +48V<sub>DC</sub> will have been filtered at the &quot;wall wart&quot; noise could have been added as the power was sent through the wire to the channel strip.</td>
+            </tr>
+            <tr>
+              <td>+48v</td>
+              <td>Circuit node</td>
+              <td>This arrow symbol indicates that this point in the circuit is connected to other points in the circuit that are also labeled +48v. This reduces the number of lines drawn all over a schematic, making it easier to read.</td>
+            </tr>
+            <tr>
+              <td>Chassis GND</td>
+              <td>Circuit Node</td>
+              <td>This connects to the metal of the physical chassis of the equipment. This is used for safety and shielding for noise.</td>
+            </tr>
+            <tr>
+              <td>JG</td>
+              <td>jumper</td>
+              <td>This allows the circuit ground and chassis ground to be connected or not as needed. This is an internal connection, not one what the end user has access to.</td>
+            </tr>
+            <tr>
+              <td>L1/L2</td>
+              <td>Inductor</td>
+              <td>Part of the filter circuit that smooths out the pulses from the switching regulator into flat DC.</td>
+            </tr>
+            <tr>
+              <td>C2/C3</td>
+              <td>Capacitor</td>
+              <td>Part of the filter circuit that smooths out the pulses from the switching regulator into flat DC.</td>
+            </tr>
+            <tr>
+              <td>+15V</td>
+              <td>Circuit node</td>
+              <td>This arrow symbol indicates that this point in the circuit is connected to other points in the circuit that are also labeled +15v. This reduces the number of lines drawn all over a schematic, making it easier to read.</td>
+              </tr>
+            <tr>
+              <td>-15V</td>
+              <td>Circuit node</td>
+              <td>This arrow symbol indicates that this point in the circuit is connected to other points in the circuit that are also labeled -15v. This reduces the number of lines drawn all over a schematic, making it easier to read.</td>
+              </tr>
+          </tbody>
+        </table>
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

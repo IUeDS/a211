@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../A112/main/index.html">Index</a></li>
+            <li><a href="../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+       <p>In this section I will present some other uses of OpAmps. These circuits are intended to give you a general idea of how some of these circuits might look. There are many variations of each of these circuits.</p>
+       <h1>Balanced Input</h1>
+       <div class="image_left"> <a href="../img/unit14/balancedinput.png" target="new"><img src="../img/unit14/balancedinput.png" alt="" width="300" height="357" class="image_border" ></a></div>
+       <p>One common use of OpAmps is for balanced inputs. In professional audio we use balanced circuits for most of our audio devices. The purpose of the balanced line is to reduce noise that would be added to the signal as it is sent through wires. <em>More on this in the next course, A212 or A522.</em></p>
+       <p>Because OpAmps are differential devices (the output is the difference of the + and - inputs) they work very well for this. figure 8-1 shows and example of a balanced input amplifier.</p>
+       <ul>
+         <li>R1 is the typical R1 from out inverting amplifier circuit. </li>
+         <li>R3 is serving the function of our typical R2. R1 and R3 set the gain of the circuit.</li>
+         <li>C1 is there to create a low pass filter that reduces anything above audio frequencies.</li>
+         <li>R2,R4, and C2 are there to match the impedance to ground of the Hot and Cold inputs. This is extremely important in determining how well a balanced line rejects external noise.</li>
+        </ul>
+		  <div class="line_break"></div>
+      <h1>Summing</h1>
+      <div class="image_right"> <a href="../img/unit14/summingamplifier.png" target="new"><img src="../img/unit14/summingamplifier.png" alt="" width="400" height="319" class="image_border" ></a></div>
+      <p>One of the things we do a lot in audio is mix signals together. The last circuit subtracted the inverting input from the non-inverting input. Figure 8-2 is a summing amplifier so it will add the signals at inputs 1-4 together. A mixing console would have a number of these circuits.</p>
+      <ul>
+        <li>R1 through R4 are in place of the typical R1 in our inverting amplifier circuit.</li>
+        <li>R5 is in place of the typical R2.</li>
+        <li>Gain for input 1 (for example) would be $Gain = \frac {R5}{R1}$</li>
+        <li>Gain of each input could be set differently by changing R1-4.</li>
+        <li>C1 is there to create a low pass filter that reduces anything above audio frequencies.</li>
+      </ul>
+      <div class="line_break"></div>
+      <h1>Comparing</h1>
+      <div class="image_left"> <a href="../img/unit14/windowcomparator.png" target="new"><img src="../img/unit14/windowcomparator.png" alt="" width="450" height="392" class="image_border" ></a></div>
+      <p>Figure 8-3 shows a window comparator circuit. This circuit would light the LED whenever the audio signal is within a certain range. This LED would turn off if the signal was too loud or too soft. <em>This circuit is not something you will likely see, but demonstrates other possibilities with OpAmps.</em></p>       
+      <ul>
+        <li>The  voltage divider of R1 and R2 sets the most positive voltage below which the LED  will be turned on.</li>
+        <li>The  voltage divider of R3 and R4 sets the most negative voltage above which the LED  will be turned on.</li>
+        <li>The  outputs of IC1 and IC2 are combined to bias the base of Q1 to turn the LED on  or off.</li>
+      </ul>
+        <!-- InstanceEndEditable -->
+  		</div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow">></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"><</span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en"><!-- InstanceBegin template="/Templates/dreamweaver_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Dreamweaver Template</title>
+	<!-- InstanceEndEditable -->
+	<!--favicons -->
+    <link href="https://www.iu.edu/favicon.ico" rel="icon" />
+    <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon" />
+    <!-- imported fonts --> 
+    <script src="//use.typekit.net/ayq1mtq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>    
+    <!-- css style sheets -->
+    <!-- InstanceBeginEditable name="css" -->
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+<!-- InstanceEndEditable -->    
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- script library imports -->
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="branding-bar">
+        <p class="campus">
+            <a href="http://www.iub.edu/">
+                <img src="../../../A112/_iu-brand/img/trident-tab.gif" height="73" width="64" alt="IU logo" />
+                <span id="campus_name">Indiana University Bloomington </span>
+            </a>
+        </p>
+    </div> <!-- end of branding-bar div -->
+    <header>
+          <div class="titles">
+            <h1 class="title"><a href="../../../A112/main/index.html">A112: Electronics II</a></h1>
+            <div class="subtitle">
+                <p><a href="http://music.indiana.edu/departments/academic/recording-arts/" class="no-wrap">Department of Recording Arts</a> &#124; <a href="http://music.indiana.edu" class="no-wrap">Jacobs School of Music</a></p>
+            </div> <!-- end of subtitle div -->
+          </div> <!-- end of titles div -->
+          <!-- InstanceBeginEditable name="header" -->
+          <div class="page_header">
+            <span class="left header_unit">Unit <span class="unit_number"></span>, Page <span class="page_number"></span> of <span class="last_number"></span></span>
+            <span class="center header_unit title_header"></span>
+            <span class="right header_unit"></span> 
+          </div> <!-- end of page_header div -->
+          <!-- InstanceEndEditable -->
+      </header>
+      <nav>
+        <ul>
+            <li><a href="../../../A112/main/index.html">Index</a></li>
+            <li><a href="../../../A112/main/glossary.html">Glossary</a></li>
+            <li><a href="../../../A112/main/syllabus.html">Syllabus</a></li>
+            <li><a href="../../../A112/main/tests_and_surveys.html">Tests &amp; Surveys</a></li>
+        </ul>
+      </nav>
+   <main>
+    <div class="content_wrapper">
+      <div class="content"> 
+        <!-- InstanceBeginEditable name="content" -->
+        <div class="image_right"><a href="../../img/unit14/labs/NE5532.png" target="new"> <img src="../../img/unit14/labs/NE5532.png" alt="OpAmp pinout" width="149" height="150" class="image_border" style="clear: both; display: table; margin: 0 auto;"/></a></div>
+        <div class="image_right"><a href="../../img/unit14/labs/potentiomters.png" target="new"> <img src="../../img/unit14/labs/potentiomters.png" alt="OpAmp pinout" width="172" height="150" class="image_border" style="clear: both; display: table; margin: 0 auto;"/></a></div>
+        <p>Required Materials:        
+        <ul>
+          <li>Resistors: 1-10KΩ,  and 1-100KΩ</li>
+          <li>Capacitors:  3- 0.047µF caps, plus whatever else you can find.</li>
+          <li>I.C.s:  1-SA5532AP dual OpAmp (or similar)</li>
+          <li>DPDT momentary switch</li>
+        </ul>
+        <div class="line_break"></div>
+    
+        <div class="image_left"></div>
+        <h1>Playing with your <strike>Food</strike>Filters</h1>
+        <div class="image_right"> <a href="../../img/unit14/labs/Lab14-2Schematic.PNG" target="new"><img src="../../img/unit14/labs/Lab14-2Schematic.PNG" alt="schematic" width="400" height="326" class="image_border"/></a></div>
+        <p>This lab is gonna be a bit different, I want you to experiment and figure out what is going on. You will start by building the circuit shown in the schematic, a band pass Butterworth filter. You will input a couple different things while listening and seeing the output. Write down descriptions of the sound and image for each experiment so that you can compare them. You will not be turning in these descriptions, they will just be for you. These experiments will build on the  square waves demonstrations we did in class.</p>
+        <p><strong>14-9. 
+        </strong>Build the circuit as shown in figure 2-3.
+        <p>14-10. Send an input from the AWG of a 100Hz square wave at 2V<sub>PK-PK</sub>
+        <ul>
+          <li>Connect the output to the oscilloscope.
+            <ul>
+              <li>needless to say, get a good image on the scope.</li>
+            </ul>
+          </li>
+          <li>Connect the output to the amplifier in.
+            <ul>
+              <li>Yes, the output is going two places.</li>
+              <li>make sure your amplifier is set up so you can get sound out of the speaker.</li>
+            </ul>
+          </li>
+          <li>Adjust VR1 and:
+            <ul>
+              <li>watch the scope</li>
+              <li>listen</li>
+            </ul>
+          </li>
+          <li>Set the oscilloscope to FFT instead of oscilloscope. You do this the same way you would set it to  be a meter. An FFT (Fast Fourier Transform) is a display of the frequency response.Use the timing controls (no text at bottom of scope) to set the range to 8kHz for the FFT. <em>see figure #2-4 </em></li>
+          <li>What do you think VR1 is changing about the filter?          </li>
+        </ul>
+        <div class="image_right"> <a href="../../img/unit14/labs/FFT.JPG" target="new"><img src="../../img/unit14/labs/FFT.JPG" alt="schematic" width="304" height="220" class="image_border"/></a></div>
+        <p><strong>14-11.</strong> Change the source from AWG to audio from phone or PC.</p>
+        <ul>
+          <li>Adjust VR1 and:
+            <ul>
+              <li>watch the oscilloscope and FFT</li>
+              <li>Listen</li>
+            </ul>
+          </li>
+          <li>Has your mind changed abouut what VR1 is changing about the filter?</li>
+        </ul>
+<p><strong>14-12. </strong>change back to the AWG as your source. </p>
+<ul>
+        <li>	Set the AWG to output and triangle wave and then noise instead of a square wave. </li>
+          <li>Adjust VR1 and:
+        </li>
+        <ul>
+          <li>watch the oscilloscope and FFT</li>
+          <li>Listen</li>
+        </ul>
+        <li>Has your mind changed abouut what VR1 is changing about the filter?</li>
+        </ul>
+        <div class="image_right"> <a href="../../img/unit14/labs/Lab14-2AltInput.PNG" target="new"><img src="../../img/unit14/labs/Lab14-2AltInput.PNG" alt="schematic" width="400" height="221" class="image_border"/></a></div>
+        <p><strong>14-13. </strong>Now:
+        <ol>
+          <li>Disconnect the AWG from the input to your circuit.</li>
+          <li>Build the circuit in figure #2-5 and use it as your source (<em>in place of the AWG</em>).          </li>
+          <ul>
+            <li>Test the switch using your meter (continuity test) to know how the physical connections relate to the schematic.</li>
+          </ul>
+          <li>Tap the switch to test your circuit. Something rhythmic might be fun here.          </li>
+        </ol>
+        <ol>
+          <ul>
+            <li>be sure to crank up the speaker<br>
+            </li>
+          </ul>
+          <li>Adjust VR1 as you do this, listen and watch the output.</li>
+        </ol>
+        <p><strong>14-14. </strong>Now choose the input that you found most enjoyable, connect it and drop some beats....bass......??? Phat hip notes?????<br>
+        <em>I have no idea how to even pretend to talk the talk, just have some fun playing with sounds. :-)</em></p>
+        </p>
+        <p><strong>Lab Questions: </strong></p>
+        <strong><ol>
+          <li>Why is the circuit doing this to the square waves and noise?</li>
+          <li>How did adjusting VR1 affect the display of the FFT?</li>
+          <li>What would the circuit you built do to audio?<br>
+          <em>Enter your answer to these into the Canvas Quiz that follows.</em>
+          </li>
+        </ol></strong>
+        <p>        
+        <div class="line_break"></div>
+        <h2><em>Try things, figure out how it works. The more you work with it beyond the specific lab directions, the more you will get out of the course!</em></h2>
+           <div class="image_left no_caption"></div>
+           <h2>For this lab you will answer questions three instead of sending me a photo.....</h2>
+        <!-- InstanceEndEditable -->
+	  </div> <!-- end of content div --> 
+  	</div>  <!-- end of content_wrapper div --> 
+  <!-- InstanceBeginEditable name="footer" -->
+  <div class="nav_footer">
+    	<span class="next_arrow"></span><span class="center next_page">  NEXT PAGE</span>
+        <span class="previous_arrow"></span><span class="center previous"> PREVIOUS</span>
+  </div> <!-- end of nav_footer div --> 
+  <!-- InstanceEndEditable -->
+</main>
+<footer>
+  <div id="IU_footer" role="contentinfo">
+     <a href="https://protect.iu.edu/privacy/policies">Privacy Notice</a>
+     <a href="http://www.iu.edu/"><img src="../../../A112/_iu-brand/img/block-iu.png" height="26" width="22" alt="Block IU" /></a> 
+     <span>
+    <a href="http://www.iu.edu/copyright/index.shtml">Copyright</a> &#169; 
+    <script type="text/javascript">
+          var theDate=new Date()
+          document.write(theDate.getFullYear())
+    </script>
+     </span> 
+     <span>The Trustees of <a href="http://www.iu.edu/">Indiana University</a>,</span> 
+     <span><a href="http://www.iu.edu/copyright/complaints.shtml">Copyright Complaints</a></span>
+</div> <!-- end of IU_footer div -->
+</footer>
+<script src="../../js/scripts.js"></script>
+</body>
+<!-- InstanceEnd --></html>

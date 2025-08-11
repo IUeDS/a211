@@ -1,0 +1,2083 @@
+@charset "utf-8";
+
+/***********************************************************************************/
+/*** Reset HTML **************************************************/
+/***********************************************************************************/
+
+html, body, p, strong, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+sup, sub {
+	display: inline;
+	font-size: 80%;	
+}
+
+/* get sup and sub to not expand line spacing */
+sup, sub {
+   vertical-align: baseline;
+   position: relative;
+   top: -0.4em;
+}
+sub { top: 0.4em; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea { 
+	margin: 0; 
+	padding: 0;
+}
+
+/* Display hand cursor for clickable form elements */
+button, input[type="button"], input[type="reset"], input[type="submit"] { 
+	cursor: pointer;
+}
+
+/* Make buttons play nice in IE: 
+www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  
+	overflow: visible;
+	width: auto;  
+}
+
+/* ensure that all widths are as specified, nothing extra added from padding/margin */
+*, *:before, *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box; 
+
+  /* Firefox (desktop or Android) 28- */
+  -moz-box-sizing: border-box;
+
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+
+/***********************************************************************************/
+/***** font files **************************************************/
+/***********************************************************************************/
+
+/** Benton Sans **/
+
+/* Regular */
+@font-face {
+    font-family: "BentonSansRegular";
+    src: url("../fonts/benton-sans/regular.eot");
+    src: url("../fonts/benton-sans/regular.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/benton-sans/regular.woff") format("woff"),
+		 url("../fonts/benton-sans/regular.ttf") format("truetype"),
+		 url("../fonts/benton-sans/regular.svg#BentonSansRegular") format("svg");
+    font-style: normal;
+	font-weight: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: "BentonSansBold";
+    src: url("../fonts/benton-sans/bold.eot");
+    src: url("../fonts/benton-sans/bold.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/benton-sans/bold.woff") format("woff"),
+		 url("../fonts/benton-sans/bold.ttf") format("truetype"),
+		 url("../fonts/benton-sans/bold.svg#BentonSansBold") format("svg");
+    font-style: normal;
+	font-weight: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: "BentonSansItalic";
+    src: url("../fonts/benton-sans/italic.eot");
+    src: url("../fonts/benton-sans/italic.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/benton-sans/italic.woff") format("woff"),
+		 url("../fonts/benton-sans/italic.ttf") format("truetype"),
+		 url("../fonts/benton-sans/italic.svg#BentonSansItalic") format("svg");
+    font-style: normal;
+	font-weight: normal;
+}
+
+/* Black Italic */
+@font-face {
+    font-family: "BentonSansBlackItalic";
+    src: url("../fonts/benton-sans/black-italic.eot");
+    src: url("../fonts/benton-sans/black-italic.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/benton-sans/black-italic.woff") format("woff"),
+		 url("../fonts/benton-sans/black-italic.ttf") format("truetype"),
+		 url("../fonts/benton-sans/black-italic.svg#BentonSansBlackItalic") format("svg");
+    font-style: normal;
+	font-weight: normal;
+}
+
+/*** Benton Sans Compressed ***/
+
+/* Regular */
+@font-face {
+    font-family: "BentonSansCompressedRegular";
+    src: url("../fonts/benton-sans-compressed/regular.eot");
+    src: url("../fonts/benton-sans-compressed/regular.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/benton-sans-compressed/regular.woff") format("woff"),
+		 url("../fonts/benton-sans-compressed/regular.ttf") format("truetype"),
+		 url("../fonts/benton-sans-compressed/regular.svg#BentonSansCompressedRegular") format("svg");
+    font-style: normal;
+	font-weight: normal;
+}
+
+/*** Benton Sans Condensed ***/
+
+/* Regular */
+@font-face {
+    font-family: "BentonSansCondensedRegular";
+    src: url("../fonts/benton-sans-condensed/regular.eot");
+    src: url("../fonts/benton-sans-condensed/regular.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/benton-sans-condensed/regular.woff") format("woff"),
+		 url("../fonts/benton-sans-condensed/regular.ttf") format("truetype"),
+		 url("../fonts/benton-sans-condensed/regular.svg#BentonSansCondensedRegular") format("svg");
+    font-style: normal;
+	font-weight: normal;
+}
+
+/*** Open Sans Condensed Light ***/
+
+@font-face {
+    font-family: 'open_sanscondensed_light';
+    src: url('../fonts/opensanscondensed_light/opensans-condlight-webfont.eot');
+    src: url('../fonts/opensanscondensed_light/opensans-condlight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensanscondensed_light/opensans-condlight-webfont.woff') format('woff'),
+         url('../fonts/opensanscondensed_light/opensans-condlight-webfont.ttf') format('truetype'),
+         url('../fonts/opensanscondensed_light/opensans-condlight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/***********************************************************************************/
+/**** General formatting **************************************************/
+/***********************************************************************************/
+
+strong, b {
+	font-family: "BentonSansBold", Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+em {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.9em; /* the text was appearing larger -- this makes it the same size as the rest of the text */
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* for javascript hover effects */
+.hover {
+	background-color: #C9B6DE !important;
+	-webkit-transition: all 0.3s ease 0s;
+  	-moz-transition: all 0.3s ease 0s;
+  	-ms-transition: all 0.3s ease 0s;
+  	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+.list-with-equations li {
+	padding-bottom: 10px;
+}
+
+/***********************************************************************************/
+/***** Accessibility **************************************************/
+/***********************************************************************************/
+
+/* Hide for both screenreaders and browsers: 
+css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { 
+	display: none; 
+	visibility: hidden; 
+}
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal. 
+www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { 
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px; 
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: 
+drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { 
+	clip: auto; 
+	height: auto; 
+	margin: 0; 
+	overflow: visible; 
+	position: static;
+	width: auto; 
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { 
+	visibility: hidden; 
+}
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { 
+	outline: none; 
+}
+
+/***********************************************************************************/
+/**IU header **************************************************/
+/***********************************************************************************/
+#branding-bar {
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px; /* Normalize font size */
+	line-height: 18px; /* Normalize line height */
+	min-height: 46px;
+	text-align: right;
+	background: #7D110C;
+}
+
+#branding-bar a {
+	color: #fff;	
+}
+
+/* Trident Tab and Campus Name */
+#branding-bar .campus {
+	font-family: "BentonSansCondensedRegular", "Arial Narrow", Arial, Helvetica, sans-serif;
+	font-size: 1em; /* 16px (16/16) */
+	left: auto;
+	letter-spacing: 0.025em;
+	line-height: 1em; /* 16px (16/16) */
+	position: absolute;
+	text-align: left;
+	text-transform: uppercase;
+	top: 6px;
+	z-index: 400;
+}
+
+#branding-bar .campus img {
+	position: absolute;
+	left: 5px; 
+	top: -6px; 
+	height: 73px;
+	width: 64px; 
+	display: block;
+}
+
+#branding-bar .campus a {
+	display: table-cell;
+	height: 40px;
+	padding: 0 0 0 45px;
+	text-decoration: none;
+	vertical-align: middle;	
+}
+
+#branding-bar #campus_name {
+	position: relative;
+	left: 40px;
+}
+
+#branding-bar .campus a:hover {
+	text-decoration: none;	
+}
+
+/***********************************************************************************/
+/* Class Header **************************************************/
+/***********************************************************************************/
+
+/* Titles (A111: Electronics I) */
+ .titles {
+	background-color: #4b306a;
+	color: #444;
+	font-family: "BentonSansCondensedRegular", Arial, Helvetica, sans-serif;
+	overflow: hidden; /* getting rid of this overflow breaks it! don't take it out! */
+	padding-bottom: 0px;
+	padding-left: 74px;
+	padding-right: 15px;
+	padding-top: 0px;
+	vertical-align: middle;
+}
+
+ .titles a {
+	color: #444;
+	text-decoration: none;
+}
+
+ .title {
+	float: left;
+	font-size: 1.5em; /* 28px (28/16) */
+	line-height: 1.071em; /* 30px (30/30) */
+}
+
+/* (department of recording arts)*/
+ .subtitle {
+	float: right;
+	font-size: 1.00em; /* 12px (12/16) */
+	line-height: 1.167em; /* 14px (14/12) */
+	text-transform: uppercase;
+}
+
+ .subtitle p {
+	padding: 10px 0 0 0;
+}
+
+ .titles, .titles a {
+	color: #fff;
+}
+
+/*****************************************************************************************/
+/* IU Footer *******************************************************/
+/* ***************************************************************************************/
+
+#IU_footer {
+	border-top: 6px solid #7d110c;
+	background: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.6em; 
+	padding: 5px;
+	margin: 0; 
+	text-align: center;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+#IU_footer a {
+	color: #990000;
+	text-decoration: none;	
+}
+#IU_footer a:hover {
+	text-decoration: underline;	
+}
+
+/***********************************************************************************/
+/**Template header and footer styling *********************************/
+/***********************************************************************************/
+
+/* Individual Page Header and Footer */
+header .page_header, .nav_footer{
+	width: 100%;
+	clear: both;
+	background-color: #F5F5F5;
+	padding: 2px;
+	font-family: 'Oswald', 'sans-serif';
+	border-bottom: 1px solid #ccc;
+	font-weight: 400;
+	visibility: hidden;
+}
+
+/* any links in header or footer -- particularly important for footer */
+header .page_header a, .nav_footer a {
+	text-decoration: none;
+	color: white;
+}
+
+/* this is for the 3 title groups in the header */
+header .page_header .header_unit, .nav_footer span {
+	display: inline-block;
+	margin: 0 -4px 0 0;
+	vertical-align: top;
+	width: 33%;
+}
+
+/* left and right (page number and date) are smaller */
+header .page_header	.left, header .page_header .right {
+	font-size: 1em; /* 1 * 16 = 16 px */
+}
+
+header .page_header .title_header {
+	font-size: 1.35em; /* 1.35 * 16 = close to 22px */
+}
+
+header .page_header span.center, .nav_footer span.center{
+	text-align: center;	
+}
+
+header .page_header span.right, .nav_footer span.right {
+	text-align: right;	
+}
+
+.nav_footer {
+	border-top: 1px solid #ccc;
+	font-size: 24px;
+	overflow: hidden;
+}
+
+/* this is for the next/previous button boxes as a whole */
+.nav_footer .next_page, .nav_footer .previous {
+	background-color: #865F87;
+	color: white;
+	width: 12%;
+	padding: 5px;
+	text-align: center;
+}
+
+/* this is for the arrows inside the buttons */
+.nav_footer .next_arrow, .nav_footer .previous_arrow {
+	color: white;
+	background-color: #4B306A;
+	width: 6%;
+	text-align: center;
+	padding: 5px 0px;
+}
+
+/* positions next page to the right */
+.nav_footer .next_page, .nav_footer .next_arrow {
+	float: right;
+	visibility: hidden; /* remove navigation */
+}
+
+/* positions previous page to the left */
+.nav_footer .previous, .nav_footer .previous_arrow {
+	float: left;
+	visibility: hidden; /* remove navigation */
+}
+
+/***********************************************************************************/
+/****** main and content styling **********************************/
+/***********************************************************************************/
+
+body {
+	font-size: 1em;
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 400;
+	background-image: url(../img/littleknobs.png);
+}
+
+main {
+	padding: 0;
+	margin: 0;
+}
+
+/* texture wrap for the sides of the content, particularly on the right */
+main .content_wrapper {
+	width: 80%;
+	float: left;
+	background-image: url(../img/littleknobs.png);
+}
+
+/* the white portion of the page, where all the content is */
+.content {
+	background-color: white;
+	padding: 20px;
+	box-shadow: 5px 5px 10px #999;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.content p {
+	margin-bottom: 20px;
+	line-height: 1.5em;
+	overflow: hidden; /* makes things less wrapp-y... */
+}
+
+/* this is optional and not included on most pages */
+.paragraph_header {
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	font-size: 28px;
+	text-transform: uppercase;
+}
+
+/* this is optional and not included on most pages */
+main .content .header_paragraph {
+	color: #4B306A;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+/* this is optional and not included on most pages */
+main h1 {
+	font-size: 3em;
+	font-family: 'Oswald', 'sans-serif';
+	color: #666;
+	text-align: center;
+}
+
+main h2 {
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+
+.caption {
+	float: left;
+	clear: both;
+	padding-top: 5px;
+	margin-bottom: 10px;
+	font-size: 0.8em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.image_row .caption {
+	float: none;
+}
+
+.center {
+	display: table;
+	margin: 20px auto;
+}
+
+/* the green, blue, and red color a word inside of a span */
+.green {
+	color: #3D9933;
+	font-weight: 700;
+}
+
+.blue {
+	color: #2756C4;
+	font-weight: 700;
+}
+
+.red {
+	color: #A72022;
+	font-weight: 700;
+}
+
+.line_break {
+	width: 85%;
+	border-bottom: solid #4B306A 2px;
+	margin: 25px auto;
+	clear: both;
+}
+
+.text-align-left {
+	text-align: left !important;
+}
+
+.text-align-center {
+	text-align: center !important;
+}
+
+.text-align-right {
+	text-align: right !important;
+}
+
+.tab {
+	padding-left: 20px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.opensans_condensed_light {
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+}
+
+/* terms that link to the glossary */
+.term {
+	font-family: "BentonSansBold", Arial, Helvetica, sans-serif;
+	color: black;
+	border-bottom: solid black 1px;
+}
+
+.term:hover {
+	text-shadow: 2px 2px 2px #C9B6DE;
+}
+
+/* for MathJax equations */
+.equation {
+	font-size: 1.25em;
+}
+
+.fraction {
+	padding: 5px 0;	
+}
+
+/* make sure images aren't squished inside tables in chrome */
+table img {
+	max-width: none;
+}
+
+/* for tables used in the content pages*/
+.content_table {
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+
+.content_table td,
+.content_table th { 
+	border: solid #CCC 1px; 
+	padding: 5px;
+	min-width: 10%;
+}
+
+.content_table_title {
+	text-transform: uppercase; 
+	font-weight: 700;  
+	margin-bottom: 5px; 
+	min-width: 50%;
+}
+
+.table_striped tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.middle_border_table td, .middle_border_table th {
+	border: none;
+}
+
+.middle_border_table td:first-child {
+	border-right: solid black 1px;
+}
+
+.resistor_color_row td {
+	height: 10px;
+	padding: 0px;
+}
+
+/* to fix IE ul indenting */
+.content ul { overflow: hidden; }
+
+/*** clearfix for floated elements inside content container ****/
+/* adapted from Chris Coyier: http://css-tricks.com/snippets/css/clear-fix/ */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+/***********************************************************************************/
+/****** left nav bar ********************************************/
+/***********************************************************************************/
+
+nav {
+	background-color: white;
+	color: black;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	border-top: none;
+	border-top: solid #C9B6DE 10px;
+	float: left;
+	margin: 2%;
+	width: 10%;
+	box-shadow: 5px 5px 10px #999;
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	font-size: 1.125em;
+	visibility: hidden; /* remove navigation */
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;	
+}
+
+nav ul li {
+	list-style: none;
+	margin: 0 0 10px 0;
+}
+
+nav ul li a {
+	color: black;
+	display: block;
+	text-decoration: none;	
+	border-bottom: solid #F5F5F5 2px;
+}
+
+nav ul li a:hover{
+	color: white;
+}
+
+/***********************************************************************************/
+/****** basic concept styling ************************************/
+/***********************************************************************************/
+
+.basicconcept, .example_circuit {
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	font-size: 1.25em; /* 20px / 16px = 1.25 em */
+	background-color: white;
+	min-width: 150px;
+	width: 90%;
+	box-shadow: 5px 5px 10px #999;
+	clear: both;
+	margin: 30px auto;
+}
+
+.basicconcept_header, .example_circuit_header {
+	color: white;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+.basicconcept_header {
+	background-color: #4B306A;	
+}
+
+.example_circuit_header {
+	background-color: #817AB8;
+}
+
+.basicconcept_body, .example_circuit_body {
+	padding: 15px;
+	text-align: left;
+}
+
+/***********************************************************************************/
+/***** aside styling **********************************************/
+/***********************************************************************************/
+
+.aside_LeftWrap, .aside_RightWrap, .aside_wide {
+	background-color: white;
+	border-top: solid #C9B6DE 5px;
+	box-shadow: 5px 5px 10px #999;
+	width: 16.5%;
+	min-width: 150px;
+	padding: 5px;
+}
+
+.aside_LeftWrap {
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+.aside_RightWrap {
+	float: right;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-right: 0;	
+}
+
+.aside_wide {
+	width: 90%;
+	margin: 40px auto;
+	padding: 5px;
+}
+
+.aside_caption {
+	font-size: 60%;
+}
+
+/***********************************************************************************/
+/***** image, audio, and video styling *******************************/
+/***********************************************************************************/
+
+.image_left {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+.image_right {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-right: 0;
+}
+
+.image_center{
+	float: none;
+	display: table;
+	margin: 20px auto;
+}
+
+/* for images with the purple border */
+.image_border {
+	border: 3px solid #4B306A;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+/* for captions that go under pictures/figures */
+.caption {
+	text-align: center;
+	width: 100%;
+} 
+
+/* if an expandable image opened in a new tab */
+a .caption {
+	/*width: auto;*/ 
+}
+
+.equation_image {
+	display: inline-block;
+	vertical-align: bottom;
+	/*margin-top: -8px;
+	margin-bottom: -8px;*/
+	margin-top: -0.4em;
+	margin-bottom: -0.4em;
+}
+
+/* for edge animations, the caption format doesn't always work */
+.animation_caption {
+	text-align: center;
+	font-size: 0.8em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* to enlarge in jquery zoom */
+.larger_image {
+	height: 448px;
+	width: 250px;
+}
+
+.video_center {
+	float: none;
+	display: table;
+	margin: 20px auto;
+}
+
+.video_right {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-right: 0;
+}
+
+.video_left {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+audio {
+	height: 2em;
+	width: 25%;
+}
+
+/***********************************************************************************/
+/***** animation start/stop buttons **********************************/
+/***********************************************************************************/
+
+.animation_button {
+	margin: 5px auto;
+	width: 25%;
+	padding: 5px;
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+	color: white;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 0.80em;	
+}
+
+.animation_button:hover {
+	cursor: pointer;
+	background: #4B306A;
+}
+
+.animation_button:active {
+	box-shadow: 0px 0px 6px #F93;
+}
+
+.hidden_animation, .hidden_image {
+	display: none;
+}
+
+/***********************************************************************************/
+/***** game styling *********************************************/
+/***********************************************************************************/
+
+.game_center, .game_left, .game_right {
+	border: 2px solid #4B306A;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+.game_center {
+	clear: both;
+	position: relative;
+	min-height: 355px;
+}
+
+.game_left {
+	float: left;
+	margin-right: 10px;
+}
+
+.game_right {
+	float: right;
+}
+
+/* the game object itself */
+.game_left object, .game_right object, .game_center object {
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.game_instructions {
+	float: left;
+	width: 35%; 
+	padding: 5px;
+	margin-right: 20px;
+}
+
+/* the HOW TO PLAY header */
+.game_instructions strong {
+	text-transform: uppercase;
+	border-bottom: solid #C9B6DE 5px;
+}
+
+/* for the paragraph after the header */
+.game_instructions strong + p {
+	margin-top: 20px;
+}
+
+/***********************************************************************************/
+/***** splash screen for games  *********************************************/
+/***********************************************************************************/
+
+.splash_exit:hover {
+	cursor: pointer;
+}
+
+.splash {
+	position: absolute;
+	z-index: 800;
+	width: 100%;
+	background-color: rgba(124,123,123,0.70);
+	border-radius: 10px;
+}
+
+.splash .video_center {
+	z-index: 850;
+}
+
+.splash_exit {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 900;
+}
+
+
+/***********************************************************************************/
+/* Index: Accordion and Table Styling *****************************/
+/***********************************************************************************/
+
+/* accordion styling */
+.accordion{
+	width: 75%;	
+}
+
+.accordion_header {
+	font-size: 1.75em; /* 16 * 1.75 = 28px */
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	color: white;
+	background-color: #C9B6DE;
+	border-bottom: solid white 3px;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+.accordion_header:hover {
+	cursor: pointer;
+}
+
+.accordion_body {
+	padding: 10px;
+}
+
+/* when accordion is clicked */
+.active_accordion {
+	background-color: #4B306A;
+}
+
+/* accordion table styling */
+.accordion table {
+	border-collapse: collapse;
+	margin: 20px 0px;
+}
+
+/* the purple table header */
+.accordion thead{
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+	color: white;
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	font-size: 1.5em;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	text-align: left;
+}
+
+.accordion th {
+	padding: 10px;
+}
+
+.accordion tbody {
+	border: solid #e0e0e0 1px;
+}
+
+.accordion tbody tr td {
+	padding: 5px 10px;
+	border-bottom:1px solid #e0e0e0;
+}
+
+/* don't want a double border for last row */
+.accordion tbody tr:last-child td {
+	border-bottom: none;
+}
+
+/* zebra effect */
+.accordion tbody tr:nth-child(2n) {
+	background-color: #f0f3f5;
+}
+
+/* accordion link styling */
+.accordion a {
+	color: #4B306A;
+}
+
+.accordion a:hover {
+	color: #C9B6DE;
+}
+
+/*pseudo-link styling for page numbers and titles, set in the javascript */
+.accordion tr td:nth-child(1), .accordion tr td:nth-child(2) {
+	color: #4B306A;
+	text-decoration: underline;
+}
+
+.accordion tr td:nth-child(1):hover, .accordion tr td:nth-child(2):hover {
+	color: #C9B6DE;
+	cursor: pointer;
+}
+
+/* non-linked pages in the course information panel should not be styled as links*/
+.accordion .course_information tbody tr td:nth-child(2) {
+	color: black;
+	text-decoration: none;
+}
+
+.accordion .course_information tbody tr td:nth-child(2):hover {
+	color: black;
+	cursor: default;
+}
+
+/***********************************************************************************/
+/* Glossary Styling ********************************************/
+/***********************************************************************************/
+
+.glossary {
+	background: url('../img/Champ with input redrawn.png');	
+}
+
+/* adds white filter to blur out background image */
+.glossary_filter {
+	background: rgba(255,255,255,0.90);
+}
+
+.glossary table {
+	width: 97%;
+	border-collapse: collapse;
+}
+
+/* extra border necessary in table, not in search results */
+.glossary tbody td { 
+	border: solid #CCC 1px; 
+}
+
+.glossary td {
+	background: white;
+	padding: 10px;
+}
+
+.glossary th {
+	text-align: left;
+}
+
+.glossary .letter_group {
+	margin-bottom: 30px;
+}
+
+.glossary .letter_header {
+	font-weight: 700;
+	font-size: 2em;
+}
+
+.glossary .term {
+	margin-bottom: 20px;
+}
+
+.glossary .term_name {
+	font-family: 'Open Sans', sans-serif;
+	color: #4B306A;
+	font-weight: 700;
+	width: 15%;
+}
+
+.glossary .definition {
+	width: 65%;
+}
+
+.glossary .symbol {
+	width: 5%;
+}
+
+.glossary .unit_source {
+	width: 5%;
+}
+
+/* for the linked letters at the top */
+.glossary .letter_selection {
+	border-bottom: solid #C9B6DE 2px;
+	margin: 20px 18%;
+	text-align: center;
+	width: 50%;
+}
+
+.glossary .letter_selection a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: black;
+	text-decoration: none;
+	font-size: 1.25em;
+}
+
+.glossary .letter_selection a:hover {
+	color: #C9B6DE;
+}
+
+/* glossary search styling */
+.glossary .glossary_search {
+	width: 50%;
+	margin: 20px 18% 10px 18%;
+	text-align: center;
+}
+
+.glossary .glossary_search input {
+	padding: 5px;
+	margin: 5px;
+}
+
+/* golden glow around search text input box when entering text */
+.glossary .glossary_search .search_text:focus {
+	box-shadow: 0px 0px 6px #F93;
+}
+
+/* search buttons */
+.glossary .glossary_search .search_submit, .glossary .glossary_search .reset_submit {
+	border: none;
+	color: white;
+	box-shadow: 2px 2px 3px #000;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1em;
+}
+
+.glossary .glossary_search .search_submit {
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+}
+
+.glossary .glossary_search .reset_submit {
+	background: #4B306A;
+	background: linear-gradient(#4B306A, #62527A);
+}
+
+.glossary img {
+	margin: 10px 0px;
+}
+
+/* for tables within the table, such as "Resistor Color Code" */
+.glossary .inner_table {
+	margin: 10px;
+}
+
+.glossary .inner_table .smaller_text {
+	font-size: 0.9em;
+}
+
+/* for autocomplete results */
+.ui-autocomplete {
+  z-index: 1000;
+  max-height: 250px;
+}
+
+/***********************************************************************************/
+/* Appendix Styling ********************************************/
+/***********************************************************************************/
+
+.appendix table {
+	width: 50%;
+}
+
+.appendix th {
+	background: #C9B6DE;
+	background: linear-gradient(#4B306A, #8A6699);
+	color: white;
+	font-family: 'Open Sans';
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	text-align: left;
+	border-left: solid white 1px;
+	padding: 5px;
+}
+
+.appendix th:nth-child(1) {
+	border-left: solid #CCC 1px;
+}
+
+/* zebra effect */
+.appendix tbody tr:nth-child(2n) {
+	background-color: #f0f3f5;
+}
+
+.appendix a {
+	color: #4B306A;
+}
+
+.appendix a:hover {
+	color: #C9B6DE;
+}
+
+/***********************************************************************************/
+/***** question and answer buttons	****************************/
+/***********************************************************************************/
+
+.question_and_answer_left, .question_and_answer_right {
+	margin: 0px 20px 20px 0px;
+	width: 33%;
+}
+
+.question_and_answer_full {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.question_and_answer_left {
+	float: left;
+}
+
+.question_and_answer_right {
+	float: right;
+}
+
+.question_and_answer_left strong, .question_and_answer_right strong{
+	text-transform: uppercase;
+}
+
+.question_button {
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+	color: white;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	padding: 5px;
+	width: 95%;
+	margin: 10px auto;
+	border: solid #4B306A 2px;
+}
+
+.question_button:hover {
+	cursor: pointer;
+}
+
+.revealed_answer {
+	width: 95%;
+	border: solid #C9B6DE 2px;
+	border-top: 0px;
+	margin: 5px auto;
+	margin-top: 0px;
+	padding: 5px;
+	text-align: center;
+}
+
+.revealed_answer_header {
+	font-weight: 700;
+	text-transform: uppercase;
+	border-bottom: solid #C9B6DE 5px;
+	width: 50%;
+	margin: 5px auto;
+}
+
+.revealed_answer_header_wide_lower {
+	font-weight: 400;
+	text-transform: none;
+	border-bottom: solid #C9B6DE 5px;
+	width: 90%;
+	margin: 5px auto;
+}
+
+
+.question_button_header {
+	font-weight: 700;
+	text-transform: uppercase;
+	width: 33%;
+	margin: 5px auto;
+}
+
+.question_and_answer_full .question_button .question_button_header {
+	width: 95%;
+}
+
+.question_button_header .question_button_subheader{
+	font-size: 0.8em;
+}
+
+/***********************************************************************************/
+/* Lab Questions **********************************************/
+/***********************************************************************************/
+
+/*
+.lab_question {
+	width: 100%;
+	float: right; 
+	clear: right;
+}
+*/
+
+.lab_question_feedback {
+	display: none;
+}
+
+.lab_question_button {
+	width: 25px;
+	height: 25px;
+	border: 3px solid #CCC;
+	border-radius: 50%;
+	margin-right: 20px;
+	float: left;
+}
+
+.lab_question_option {
+	margin: 20px 0;
+}
+
+.unanswered {
+	background-color: #4B306A;
+}
+
+.answered {
+	background-color: #F7B26E;
+}
+
+.lab_submit_button, .lab_submit_button_numeric, .lab_single_submit_button {
+	width: 15%;
+	min-width: 100px;
+	height: 35px;
+	padding: 5px;
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+	color: white;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.25em;
+	margin: 10px;
+	float: left;
+}
+
+.lab_submit_button_numeric {
+	margin-left: 0; 
+}
+
+.lab_submit_button:hover, .lab_submit_button_numeric:hover, .lab_single_submit_button:hover {
+	cursor: pointer;
+	background: linear-gradient(#F7B26E, #F2800D);
+}
+
+.lab_answer_feedback {
+	width: 70%;
+	padding: 10px;
+	margin: 0 0 20px 20px;
+	border: solid #E1D5C7 2px;
+	border-radius: 10px;
+	background-color: rgba(255, 241, 238, 0.2);
+	float: left;
+}
+
+.lab_answer_feedback h1 {
+	font-family: "open_sanscondensed_light","Open Sans Condensed",sans-serif;
+	font-size: 2em;
+	border-bottom: solid 3px #F7B26E;
+	display: none;
+}
+
+.lab_answer_feedback .lab_feedback_text {
+	padding: 10px 0;
+}
+
+/* for single submit questions, trim down the padding and margins so there's less scrolling */
+.lab_question_single_submit .lab_feedback_text {
+	padding: 5px 0;
+}
+
+.lab_question_single_submit .lab_answer_feedback {
+	padding: 5px;
+	margin: 0 0 5px 5px;
+}
+
+.lab_question_single_submit p {
+	margin-bottom: 5px;
+}
+
+.lab_numeric_input {
+	margin-bottom: 10px;
+}
+
+/* for lab questions embedded in a table */
+.lab_submit_button_table {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0;
+}
+
+.lab_numeric_input_table {
+	float: left;
+}
+
+.lab_answer_feedback_table {
+	width: 40%;
+	margin: 0;
+}
+
+.lab_question_dropdown {
+	float: left;
+	height: 3em;
+	min-width: 25%;
+}
+
+.lab_question_single_submit .lab_submit_button {
+    display: none;
+}
+
+/* animation for feedback */
+
+.lab_tada {
+	-webkit-animation-name: highlighted;
+	animation-name: highlighted;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+@keyframes highlighted {
+	0% {
+		background-color: rgba(247, 178, 110, 1.0);
+	}
+	
+	100% {
+		background-color: rgba(255, 241, 238, 0.2)
+	}
+}
+
+@-webkit-keyframes highlighted {
+	0% {
+		background-color: rgba(247, 178, 110, 1.0);
+	}
+	
+	100% {
+		background-color: rgba(255, 241, 238, 0.2)
+	}
+}
+
+/* if the question is in a table cell, then it's outside of where we can grab the question text,
+*  so we need to make it hidden for the student so it's not duplicated, but still visible in the
+*  results view, so a class of "hidden" would not be displayed in results; so use a custom component class
+*/
+.table-hidden-question {
+  	display:  none;
+}
+
+.scopefont {
+	font-style: normal;
+	font-weight: 400;
+	background-color: #000000;
+	color: #FFDF0E;
+	font-size: small;
+}
+.scopefont_highlight {
+	font-style: normal;
+	font-weight: 400;
+	background-color: #FFDF0E;
+	color: #000000;
+	font-size: small;
+}
+
+/***********************************************************************************/
+/* Unit 2, Game 1 **********************************************/
+/***********************************************************************************/
+
+	
+	#U02GE01 {
+		width: 55%;
+		min-width: 700px;
+		padding: 5px;
+	} 
+	
+	#resistor_content {
+		width: 80%;
+		margin: 0 auto;
+		float: left;
+		text-align: center;
+		min-width: 650px;
+	}
+	
+	.resistor_image_chunk {
+		float: left !important;
+		margin: 0px !important;
+	}
+	
+	.selector_box {
+		display: inline-block;
+	}
+	
+	#resistor_table {
+		border-collapse: collapse;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	#resistor_table #result_row th, .selector_label {
+		font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+	
+	#resistor_table th, #resistor_table td {
+		border: solid #C9B6DE 1px;
+		padding: 2px;
+	}
+	
+	#resistor_table #result {
+		padding: 0px 5px;
+	}
+	
+	.selector_box {
+		margin: 20px;
+	}
+	
+	.game2_button {
+		margin: 5px;
+		width: 25%;
+		padding: 5px;
+		background: #C9B6DE;
+		background: linear-gradient(#A985AD,#8A6699);
+		color: white;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+		border-radius: 10px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 0.80em;
+		display: inline-block;
+	}
+
+	.game2_button:hover {
+		cursor: pointer;
+	}
+	
+	#U02GE01 #button_group {
+		width: 50%;
+		margin: 10px auto;
+	}
+	
+	#U02GE01 .game_instructions {
+		/*float: none;
+		width: 33%;
+		margin: 5px auto;*/
+	}
+
+/***********************************************************************************/
+/* Walkthroughs **********************************************/
+/***********************************************************************************/
+
+.walkthrough .step_header {
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	font-size: 2em;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	border-bottom: solid #C9B6DE 5px;
+	width: 35%;
+}
+
+.walkthrough .video_holder {
+	margin-bottom: 10px;
+}
+
+.walkthrough .audio_holder {
+	margin-bottom: 10px;
+}
+
+.walkthrough .step_button {
+	margin: 5px;
+	width: 10%;
+	padding: 5px;
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+	color: white;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 0.80em;
+	display: inline-block;
+}
+
+.walkthrough .step_button:hover {
+	cursor: pointer;
+	background: linear-gradient(#F7B26E, #F2800D);
+}
+
+/***********************************************************************************/
+/* Interactive Frequency Response Curves **********************************************/
+/***********************************************************************************/
+/*
+.interactive_FRC {
+	width: auto;
+	text-align: center;
+	float: right;
+	margin: -15px 0px 10px 10px;
+	padding: 10px;
+	border: solid #4B306A 2px;
+	border-radius: 5px;
+}
+
+.interactive_FRC .left {
+	float: left;
+	margin: -15px 10px 10px 0px;
+}
+
+.interactive_FRC .right {
+	float: right;
+	margin: -15px 0px 10px 10px;
+}
+*/
+
+.interactive_FRC_left, .interactive_FRC_right {
+	width: auto;
+	text-align: center;
+	float: right;
+	margin: -15px 0px 20px 10px;
+	padding: 10px;
+	border: solid #4B306A 2px;
+	border-radius: 5px;
+	max-width: 35%;
+}
+
+.interactive_FRC_left {
+	float: left;
+	margin: -15px 20px 20px 0px;
+}
+
+.interactive_FRC_right {
+	float: right;
+	margin: -15px 0px 20px 20px;
+}
+
+.interactive_FRC_left img, .interactive_FRC_right img {
+	margin: 10px auto;
+}
+
+.interactive_FRC_left audio, .interactive_FRC_right audio {
+	width: 60%;
+	margin-bottom: 10px;
+}
+
+.interactive_FRC_left .image_holder, .interactive_FRC_right .image_holder {
+	margin-bottom: 10px;
+}
+
+.interactive_FRC_left .audio_holder, .interactive_FRC_right .audio_holder {
+	margin-bottom: 10px;
+}
+
+.interactive_FRC_left .audio_button, .interactive_FRC_right .audio_button {
+	margin: 5px;
+	width: 33%;
+	padding: 5px;
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+	color: white;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	font-weight: 700;
+	/*font-size: 0.80em;*/
+	font-size: 1em;
+	display: inline-block;
+}
+
+.interactive_FRC_left .audio_button:hover, .interactive_FRC_right .audio_button:hover {
+	cursor: pointer;
+	background: linear-gradient(#F7B26E, #F2800D);
+}
+
+/***********************************************************************************/
+/* Image Swaps **********************************************/
+/***********************************************************************************/
+
+.image_swap {
+	width: auto;
+	text-align: center;
+	float: left;
+	margin: -15px 20px 10px 0px;
+	padding: 10px;
+	border: solid #4B306A 2px;
+	border-radius: 5px;
+}
+
+.image_swap .swap_button {
+	margin: 5px;
+	width: 25%;
+	height: 50px;
+	padding: 5px;
+	background: #C9B6DE;
+	background: linear-gradient(#A985AD,#8A6699);
+	color: white;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 0.80em;
+	/*display: inline-block;*/
+	float: left;
+}
+.image_swap .swap_button_large {
+	width: 40%;
+}
+
+.image_swap .swap_button:hover {
+	cursor: pointer;
+	background: linear-gradient(#F7B26E, #F2800D);
+}
+.image_swap .swap_button40:hover {
+	cursor: pointer;
+	background: linear-gradient(#F7B26E, #F2800D);
+}
+
+
+/***********************************************************************************/
+/* Course Introduction Page ********************************/
+/***********************************************************************************/
+
+.contact_header {
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	margin-bottom: 10px;
+	font-size: 1.4em;
+	border-bottom: solid 1px #C9B6DE;
+	width: 25%;
+}
+
+.contact_information {
+	font-family: 'open_sanscondensed_light', 'Open Sans Condensed', sans-serif;
+	margin: 20px;
+	font-size: 1.2em;
+}
+
+/***********************************************************************************/
+/* Call and Answer Tables ********************************/
+/***********************************************************************************/
+
+.call_answer_table {
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+
+.call_answer_table td { 
+	border: solid #CCC 1px; 
+	padding: 10px;
+}
+
+.call_answer_table tr td:first-child {
+	background-color: #E8E8E8;
+	text-align: right;
+	vertical-align: middle;
+	min-width: 250px;
+}
+
+/***********************************************************************************/
+/* Two tone Tables ********************************/
+/***********************************************************************************/
+
+.two_tone_table {
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+.two_tone_table td, .two_tone_table th { 
+	border: solid #CCC 1px; 
+	padding: 10px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.two_tone_table tr td:first-child {
+	background-color: #E8E8E8;
+	min-width: 250px;
+}
+
+.two_tone_table th {
+	background-color: #9571A1;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #370251;
+}
+.two_tone_table_left {
+	border-collapse: collapse;
+	margin: 20px 0;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.two_tone_table_left td, .two_tone_table th { 
+	border: solid #CCC 1px; 
+	padding: 10px;
+	vertical-align: top;
+	text-align: left;
+}
+
+.two_tone_table_left tr td:first-child {
+	background-color: #E8E8E8;
+	vertical-align: top;
+	min-width: 250px;
+}
+
+.two_tone_table_left th {
+	background-color: #9571A1;
+	font-weight: 700;
+	color: #370251;
+}
+
+.table-grayed-row td {
+	background-color: #EEE;
+	padding: 0;
+}
+
+.table-align-left {
+	text-align: left !important;
+}
+
+.multiple_question_table {
+	width: 80%;
+	clear: both;
+}
+
+.multiple_question_table tr td:first-child {
+	min-width: 0px;
+}
+
+.two_tone_table_nobk {
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+.two_tone_table_nobk td, .two_tone_table_nobk th { 
+	border: solid #CCC 1px; 
+	padding: 10px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+
+.two_tone_table_nobk th {
+	background-color: #9571A1;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #370251;
+}
+
+/**********************************/
+/***** Responsive design */
+/**********************************/
+
+/* for ipads */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+	/* overall styles */	
+	.content {
+		padding: 5px;
+	}
+	
+	.content p {
+	overflow: visible;
+	text-align: center;
+	}
+	
+	/* these classes are applied to specific images/paragraphs that did not lay out well on the ipad*/
+	.ipad_clear {
+		clear: both;
+	}
+	
+	.ipad_nofloat {
+		float: none;
+	}
+	
+	.ipad_floatleft {
+		float: left;
+	}
+	
+	.ipad_center{
+		float: none;
+		display: table;
+		margin: 10px auto;
+	}
+	
+	/* game styling */
+	.game_center {
+		border-radius: 3px;
+	}
+	
+	.game_right {
+		border-radius: 3px;
+	}
+	
+	.game_instructions {
+		width: 80%;
+		float: left;
+		clear: both;
+		padding: 5px;
+	}
+	
+	object {
+		margin: 0;
+	}
+	
+	/* specifically for unit 2, game 1 */
+	#U02GE01 {
+		width: 98%;
+		padding: 10px 0px;
+		min-width: 0;
+	}
+	
+	#resistor_content {
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		text-align: left;
+	}
+	
+	#resistor_table {
+		margin: 5px;
+	}
+	
+	/* nav styling */	
+	.nav_footer .next_page, .nav_footer .previous {
+		width: 20%;
+	}
+	
+	.next_arrow, .previous_arrow {
+		width: 10%;
+	}
+	
+	/*aside styling */	
+	.aside_LeftWrap {
+		margin-bottom: 20px;
+	}
+	
+	audio {
+		margin-top: 10px;
+	}
+	
+	/* unit 1 minor id fixes */
+	#sine_image {
+		width: 33%;
+		height: auto;
+		margin: 10px;
+	}
+
+}
+
+/* for mobile phones or anything less than an ipad (which is 768px wide, thus the max of 767px)*/
+/* obviously this could be much better, but MS is not interested in this being used on phones */
+@media only screen and (max-width: 767px) {
+	
+	/*main and content styling */
+	main .content_wrapper {
+		width: 100%;
+	}
+	
+	.content_wrapper {
+	  border-top: solid #CDCCBC 2px;
+	}
+	
+	.content {
+	  float: left;
+	  clear: both;
+	}
+	
+	p {
+		clear: both;
+	}
+	
+	.image_left, .image_right, .caption, img {
+		float: none;
+		display: table;
+		margin: 10px auto;
+	} 
+	
+	.mobile_center {
+		float: none;
+		margin: 10px auto;
+	}
+	
+	/* for box videos */
+	iframe {
+		width: 95%;
+		clear: both;
+	}
+	
+	/* nav and header styling */
+	nav {
+	  float: left;
+	  clear: both;
+	  width: 100%;
+	  margin: 0;
+	}
+		
+	.nav_footer .next_page, .nav_footer .previous {
+		width: 32%;
+	}
+	
+	.nav_footer .next_arrow, .nav_footer .previous_arrow {
+		width: 15%;
+	}
+	
+	header .page_header	.left, header .page_header .right {
+		font-size: 0.8em;
+	}
+	
+	/* game styling */
+	.game_center, .game_right, .game_left {
+		border-radius: 3px;
+	}
+	
+	.game_center object, .game_right object, .game_left object {
+		width: 95%;
+	}
+	
+	.game_instructions {
+		width: 80%;
+		padding: 5px;
+	}
+
+	/* glossary table styling */
+	.glossary thead, .glossary th, .glossary td, .glossary tr {
+		display: block;
+	}
+	
+	.glossary tr {
+		margin-bottom: 2em;
+	}
+	
+	.glossary .term_name, .glossary .definition, .glossary .symbol, .glossary .unit_source {
+		width: 90%;
+	}
+	
+	.glossary .glossary_search input {
+		width: 100%;
+	}
+	
+}
